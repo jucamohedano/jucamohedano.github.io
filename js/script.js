@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
             element.style.opacity = '1';
         }, 200);
     });
+    
+    // Initialize lightbox for blog images
+    initLightbox();
 });
 
 // Smooth scrolling for anchor links
@@ -87,4 +90,67 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-}); 
+});
+
+// Lightbox functionality for blog post images
+function initLightbox() {
+    // Create lightbox elements
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    
+    const lightboxContent = document.createElement('div');
+    lightboxContent.className = 'lightbox-content';
+    
+    const lightboxImg = document.createElement('img');
+    lightboxImg.className = 'lightbox-image';
+    
+    const closeButton = document.createElement('button');
+    closeButton.className = 'lightbox-close';
+    closeButton.innerHTML = '&times;';
+    
+    // Append elements to DOM
+    lightboxContent.appendChild(lightboxImg);
+    lightboxContent.appendChild(closeButton);
+    lightbox.appendChild(lightboxContent);
+    document.body.appendChild(lightbox);
+    
+    // Get all images in post content
+    const postImages = document.querySelectorAll('.post-content img');
+    
+    // Add click event to images
+    postImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt || 'Enlarged image';
+            
+            // Show lightbox with slight delay for transition
+            setTimeout(() => {
+                lightbox.classList.add('active');
+            }, 10);
+            
+            // Prevent scrolling of the page
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close lightbox when clicking close button or outside the image
+    closeButton.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+    
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+    
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        // Re-enable scrolling
+        document.body.style.overflow = '';
+    }
+} 
