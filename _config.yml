@@ -1,12 +1,12 @@
 # Site settings
 title: Juan Camacho Mohedano
-email: your.email@example.com
+email: jucamohedano@gmail.com
 description: Personal website of Juan Camacho Mohedano, AI Researcher and Robotics Enthusiast
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jucamohedano.github.io" # the base hostname & protocol for your site
 github_username: jucamohedano
 twitter_username: yourhandle
-linkedin_username: juan-camacho-mohedano
+linkedin_username: juan-camacho-mohedano-9a425b1b2
 google_scholar: yourid
 
 # Build settings

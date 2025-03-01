@@ -18,6 +18,7 @@ layout: default
     </p>
 </section>
 
+{% comment %}
 <section id="publications">
     <h2>Selected Publications</h2>
     <ul>
@@ -35,6 +36,7 @@ layout: default
         </li>
     </ul>
 </section>
+{% endcomment %}
 
 <section id="projects">
     <h2>Projects</h2>
