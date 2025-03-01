@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="bio">
-    <img src="assets/images/profile_pic.png" alt="{{ site.title }}">
+    <img src="assets/images/profile_pic.png" alt="{{ site.title }}" style="width: 450px; height: 450px;">
     <p>
         Hello! I'm <strong>Juan Camacho Mohedano</strong>, an AI researcher and robotics enthusiast passionate about pushing the boundaries of intelligent systems. 🚀
     </p>
