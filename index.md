@@ -5,16 +5,16 @@ layout: default
 <section class="bio">
     <img src="assets/images/profile.jpg" alt="{{ site.title }}">
     <p>
-        Hello! I'm <strong>Juan Camacho Mohedano</strong>, a Researcher/Engineer specializing in Computer Science. 
-        I'm currently a Research Assistant at [Your Organization].
+        Hello! I'm <strong>Juan Camacho Mohedano</strong>, an AI researcher and robotics enthusiast passionate about pushing the boundaries of intelligent systems. 🚀
     </p>
     <p>
-        My research interests include Machine Learning, Artificial Intelligence, and Software Engineering. I'm particularly interested in 
-        developing intelligent systems and their applications in real-world problems.
+        Currently pursuing my MSc in AI Systems at the University of Trento, I'm exploring cutting-edge research in AI Agents, Large Language Models (LLMs), and Vision-Language Models (VLMs). My journey in AI has taken me from building CNN-based classifiers to implementing advanced test-time adaptation techniques for vision models.
     </p>
     <p>
-        Prior to my current role, I worked at [Previous Organization] on [Previous Project/Role]. 
-        I received my [Degree] in Computer Science from [University].
+        With experience at NEURA Robotics in Germany and a background in robotics competitions (RoboCup), I blend theoretical knowledge with practical applications. My work spans from 6DoF robot grasping to customizing RAG applications for optimized vector search retrieval.
+    </p>
+    <p>
+        I'm always excited to collaborate on projects that leverage AI to solve real-world problems, particularly at the intersection of computer vision, natural language processing, and robotics.
     </p>
 </section>
 
