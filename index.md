@@ -42,13 +42,13 @@ layout: default
     <h2>Projects</h2>
     <ul class="project-list">
         <li>
-            <strong><a href="/blog/2022/05/01/bsc-thesis-robot-grasping/">6DoF Robot Grasping with TIAGo</a></strong> - My BSc thesis project on teaching robots to grasp objects using deep learning and computer vision. Developed for the LASR team and RoboCup competitions.
-        </li>
-        <li>
-            <strong><a href="https://github.com/jucamohedano/my_TDA" target="_blank">Test-Time Adaptation for Vision-Language Models</a></strong> - Analysis and improvement of efficient adaptation techniques for vision models facing distribution shifts. Benchmarked failure cases and implemented waiting list mechanism to improve performance on non-IID data streams.
-        </li>
-        <li>
             <strong><a href="/blog/2024/11/30/alpha-clip-study/">Alpha-CLIP: A Breakthrough in Region-Focused AI Vision</a></strong> - A literature review exploring Alpha-CLIP's capabilities in region-focused AI vision and proposing enhancements for improved performance.
+        </li>
+        <li>
+            <strong><a href="/blog/2024/03/01/test-time-adaptation/">Test-Time Adaptation for Vision-Language Models</a></strong> - Analysis and improvement of efficient adaptation techniques for vision models facing distribution shifts. Benchmarked failure cases and implemented waiting list mechanism to improve performance on non-IID data streams.
+        </li>
+        <li>
+            <strong><a href="/blog/2022/05/01/bsc-thesis-robot-grasping/">6DoF Robot Grasping with TIAGo</a></strong> - My BSc thesis project on teaching robots to grasp objects using deep learning and computer vision. Developed for the LASR team and RoboCup competitions.
         </li>
     </ul>
 </section>
