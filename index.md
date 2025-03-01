@@ -42,7 +42,7 @@ layout: default
     <h2>Projects</h2>
     <ul class="project-list">
         <li>
-            <strong><a href="#">Project Name 1</a></strong> - Brief description of the project, its purpose, and your role in it.
+            <strong><a href="/blog/2022/05/01/bsc-thesis-robot-grasping/">6DoF Robot Grasping with TIAGo</a></strong> - My BSc thesis project on teaching robots to grasp objects using deep learning and computer vision. Developed for the LASR team and RoboCup competitions.
         </li>
         <li>
             <strong><a href="#">Project Name 2</a></strong> - Brief description of the project, its purpose, and your role in it.
