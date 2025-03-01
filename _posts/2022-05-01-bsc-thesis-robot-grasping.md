@@ -18,7 +18,7 @@ For my Computer Science with AI degree, I tackled one of robotics' classic chall
 
 In human terms, I taught a robot how to analyze objects, figure out the best way to position its gripper (robot hand), and successfully pick things up without making a mess. Think of it as teaching a toddler to grab objects, except this toddler is made of metal and runs on code.
 
-![TIAGo robot in simulation environment](/assets/images/contact_grapnet_inference_example.png)
+![TIAGo robot in simulation environment](/assets/images/contact_graspnet_inference_example.png)
 *The TIAGo robot in simulation, plotting its next grasp. (You'll need to replace this with an actual screenshot from your project!)*
 
 ## Why This Matters
