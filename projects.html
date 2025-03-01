@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Your Name</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Detailed showcase of engineering and research projects by [Your Name].">
+    <style>
+        /* Additional styles specific to the projects page */
+        .project-header {
+            background: var(--header-bg), url('assets/images/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--header-text);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .project-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .project-header p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .project-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .category-btn {
+            padding: 0.5rem 1.25rem;
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 2rem;
+            color: var(--text-color-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.875rem;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+        
+        .project-detail {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+        }
+        
+        .project-detail:nth-child(even) {
+            grid-template-columns: 1fr 2fr;
+        }
+        
+        .project-detail:nth-child(even) .project-detail-image {
+            order: 2;
+        }
+        
+        .project-detail:nth-child(even) .project-detail-content {
+            order: 1;
+        }
+        
+        .project-detail-image {
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .project-detail-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            font-weight: 700;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-color-secondary);
+        }
+        
+        .project-description {
+            margin-bottom: 1.5rem;
+            color: var(--text-color-secondary);
+            line-height: 1.8;
+        }
+        
+        .technologies-used {
+            margin-bottom: 1.5rem;
+        }
+        
+        .technologies-used h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .tech-tag {
+            background-color: var(--surface-color);
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            color: var(--text-color-secondary);
+        }
+        
+        .project-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .project-detail,
+            .project-detail:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-detail-image,
+            .project-detail-content,
+            .project-detail:nth-child(even) .project-detail-image,
+            .project-detail:nth-child(even) .project-detail-content {
+                order: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Switcher -->
+    <div class="theme-switch-wrapper">
+        <i class="fas fa-sun sun-icon"></i>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <span class="slider"></span>
+        </label>
+        <i class="fas fa-moon moon-icon"></i>
+    </div>
+
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <div id="logo">
+                    <h1>Your Name</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="project-header">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>A comprehensive showcase of my engineering and research projects, highlighting my technical expertise and problem-solving capabilities.</p>
+        </div>
+    </div>
+    
+    <section class="section">
+        <div class="container">
+            <div class="project-categories">
+                <button class="category-btn active">All</button>
+                <button class="category-btn">Software Development</button>
+                <button class="category-btn">Research</button>
+                <button class="category-btn">Data Science</button>
+                <button class="category-btn">Machine Learning</button>
+            </div>
+            
+            <!-- Project 1 -->
+            <div class="project-detail fade-in">
+                <div class="project-detail-image">
+                    <img src="assets/images/project1.jpg" alt="Project 1">
+                </div>
+                <div class="project-detail-content">
+                    <h2>Project Title 1</h2>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>2023</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span>Software Development</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>Team Project</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Detailed description of the project, explaining its purpose, your role, and the challenges you faced during its development. This section should provide enough information to understand the scope and complexity of the project.</p>
+                        <p>Include information about the problems you solved, the approaches you considered, and why you chose the specific implementation. Highlight any innovative solutions or methodologies you employed.</p>
+                    </div>
+                    <div class="technologies-used">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Technology 1</span>
+                            <span class="tech-tag">Technology 2</span>
+                            <span class="tech-tag">Technology 3</span>
+                            <span class="tech-tag">Technology 4</span>
+                            <span class="tech-tag">Technology 5</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        <a href="#" class="btn btn-secondary" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-detail fade-in">
+                <div class="project-detail-image">
+                    <img src="assets/images/project2.jpg" alt="Project 2">
+                </div>
+                <div class="project-detail-content">
+                    <h2>Project Title 2</h2>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>2022</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span>Research</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="fas fa-user"></i>
+                            <span>Individual Project</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Detailed description of the project, explaining its purpose, your role, and the challenges you faced during its development. This section should provide enough information to understand the scope and complexity of the project.</p>
+                        <p>Include information about the problems you solved, the approaches you considered, and why you chose the specific implementation. Highlight any innovative solutions or methodologies you employed.</p>
+                    </div>
+                    <div class="technologies-used">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Technology 1</span>
+                            <span class="tech-tag">Technology 2</span>
+                            <span class="tech-tag">Technology 3</span>
+                            <span class="tech-tag">Technology 4</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        <a href="#" class="btn btn-secondary" target="_blank"><i class="fas fa-file-alt"></i> Documentation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-detail fade-in">
+                <div class="project-detail-image">
+                    <img src="assets/images/project3.jpg" alt="Project 3">
+                </div>
+                <div class="project-detail-content">
+                    <h2>Project Title 3</h2>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>2022</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span>Data Science</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>Team Project</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Detailed description of the project, explaining its purpose, your role, and the challenges you faced during its development. This section should provide enough information to understand the scope and complexity of the project.</p>
+                        <p>Include information about the problems you solved, the approaches you considered, and why you chose the specific implementation. Highlight any innovative solutions or methodologies you employed.</p>
+                    </div>
+                    <div class="technologies-used">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Technology 1</span>
+                            <span class="tech-tag">Technology 2</span>
+                            <span class="tech-tag">Technology 3</span>
+                            <span class="tech-tag">Technology 4</span>
+                            <span class="tech-tag">Technology 5</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        <a href="#" class="btn btn-secondary" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-detail fade-in">
+                <div class="project-detail-image">
+                    <img src="assets/images/project4.jpg" alt="Project 4">
+                </div>
+                <div class="project-detail-content">
+                    <h2>Project Title 4</h2>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>2021</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="fas fa-user"></i>
+                            <span>Individual Project</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Detailed description of the project, explaining its purpose, your role, and the challenges you faced during its development. This section should provide enough information to understand the scope and complexity of the project.</p>
+                        <p>Include information about the problems you solved, the approaches you considered, and why you chose the specific implementation. Highlight any innovative solutions or methodologies you employed.</p>
+                    </div>
+                    <div class="technologies-used">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Technology 1</span>
+                            <span class="tech-tag">Technology 2</span>
+                            <span class="tech-tag">Technology 3</span>
+                            <span class="tech-tag">Technology 4</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        <a href="#" class="btn btn-secondary" target="_blank"><i class="fas fa-file-pdf"></i> Research Paper</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+    <script>
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const projectDetails = document.querySelectorAll('.project-detail');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active state
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Filter projects
+                    const category = this.textContent;
+                    
+                    if (category === 'All') {
+                        projectDetails.forEach(project => {
+                            project.style.display = 'grid';
+                        });
+                    } else {
+                        projectDetails.forEach(project => {
+                            const projectCategory = project.querySelector('.project-meta-item:nth-child(2) span').textContent;
+                            
+                            if (projectCategory === category) {
+                                project.style.display = 'grid';
+                            } else {
+                                project.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
