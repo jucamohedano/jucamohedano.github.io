@@ -34,29 +34,16 @@ Getting this right means robots that can genuinely help in homes, hospitals, and
 
 ## The Technical Bits
 
-I combined two main components:
+I combined two main components to create a complete autonomous grasping system:
+
+![System Overview Diagram](/assets/images/system_overview.png)
+*System architecture overview showing the perception, grasp generation, and execution components*
 
 ### 1. 3D Perception System
 This system used neural networks to:
 - Detect objects in the robot's environment
 - Generate point clouds from RGB-D camera data
 - Segment individual objects even when they're clustered together
-
-```python
-# Example pseudocode of my perception pipeline
-def perception_pipeline(rgb_image, depth_image):
-    # Pre-process images
-    processed_rgb = preprocess(rgb_image)
-    processed_depth = preprocess(depth_image)
-    
-    # Generate point cloud
-    point_cloud = generate_point_cloud(processed_rgb, processed_depth)
-    
-    # Detect and segment objects
-    objects = segment_objects(point_cloud)
-    
-    return objects
-```
 
 ### 2. Grasp Generation Systems
 
