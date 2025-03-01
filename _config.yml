@@ -1,12 +1,12 @@
 # Site settings
-title: Your Name
+title: Juan Camacho Mohedano
 email: your.email@example.com
-description: Personal website of Your Name, Researcher/Engineer
+description: Personal website of Juan Camacho Mohedano, Researcher/Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourusername.github.io" # the base hostname & protocol for your site
-github_username: yourusername
+url: "https://jucamohedano.github.io" # the base hostname & protocol for your site
+github_username: jucamohedano
 twitter_username: yourhandle
-linkedin_username: yourprofile
+linkedin_username: juan-camacho-mohedano
 google_scholar: yourid
 
 # Build settings

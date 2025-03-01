@@ -5,16 +5,16 @@ layout: default
 <section class="bio">
     <img src="assets/images/profile.jpg" alt="{{ site.title }}">
     <p>
-        Hello! I'm <strong>{{ site.title }}</strong>, a Researcher/Engineer specializing in [Your Field]. 
-        I'm currently [Current Position] at [Organization].
+        Hello! I'm <strong>Juan Camacho Mohedano</strong>, a Researcher/Engineer specializing in Computer Science. 
+        I'm currently a Research Assistant at [Your Organization].
     </p>
     <p>
-        My research interests include [Topic 1], [Topic 2], and [Topic 3]. I'm particularly interested in 
-        [Specific Interest] and its applications in [Field/Industry].
+        My research interests include Machine Learning, Artificial Intelligence, and Software Engineering. I'm particularly interested in 
+        developing intelligent systems and their applications in real-world problems.
     </p>
     <p>
         Prior to my current role, I worked at [Previous Organization] on [Previous Project/Role]. 
-        I received my [Degree] in [Field] from [University].
+        I received my [Degree] in Computer Science from [University].
     </p>
 </section>
 

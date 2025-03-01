@@ -8,21 +8,21 @@ categories: [general]
 tags: [welcome, blog]
 ---
 
-This is my first blog post using Jekyll on GitHub Pages. In this post, I'll share a bit about why I started this blog and what you can expect from future posts.
+Welcome to my personal blog! I'm Juan Camacho Mohedano, and I'll be sharing my thoughts, projects, and research here.
 
 <!--more-->
 
 ## Why I Started This Blog
 
-I created this blog to share my thoughts, research, and experiences in [Your Field]. I believe that sharing knowledge is one of the best ways to contribute to the community and also to clarify my own understanding of complex topics.
+I created this blog to share my thoughts, research, and experiences in Computer Science and Software Engineering. I believe that sharing knowledge is one of the best ways to contribute to the community and also to clarify my own understanding of complex topics.
 
 ## What to Expect
 
 Future posts will cover topics such as:
 
-- Recent developments in [Topic 1]
-- Tutorials on [Topic 2]
-- My thoughts on [Topic 3]
+- Recent developments in Machine Learning and AI
+- Software engineering best practices
+- Project walkthroughs and tutorials
 - Summaries of research papers I find interesting
 
 ## Code Example
