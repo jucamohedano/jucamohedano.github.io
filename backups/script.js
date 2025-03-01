@@ -24,11 +24,10 @@ const loadTheme = () => {
     }
 };
 
-// Apply theme when page loads
-document.addEventListener('DOMContentLoaded', loadTheme);
-
 // Theme Switch
 if (themeSwitch) {
+    loadTheme();
+    
     themeSwitch.addEventListener('change', () => {
         if (themeSwitch.checked) {
             htmlElement.setAttribute('data-theme', 'dark');
@@ -72,17 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
+        e.preventDefault();
         
-        // Skip if it's just "#"
+        const targetId = this.getAttribute('href');
         if (targetId === '#') return;
         
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-            e.preventDefault();
-            
             window.scrollTo({
-                top: targetElement.offsetTop - 20, // Small offset for better visibility
+                top: targetElement.offsetTop - 70, // Adjust for header height
                 behavior: 'smooth'
             });
         }
