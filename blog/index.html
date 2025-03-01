@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog
+---
+
+<h1>Blog</h1>
+
+<p>Welcome to my blog where I write about technology, research, and other topics that interest me.</p>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li class="post-item">
+      <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.reading_time %} · {{ post.reading_time }} min read{% endif %}</p>
+      <div class="post-excerpt">
+        {{ post.excerpt }}
+      </div>
+      <a href="{{ post.url | relative_url }}">Read more →</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if site.posts.size == 0 %}
+<p><em>No blog posts yet. Check back soon!</em></p>
+{% endif %} 

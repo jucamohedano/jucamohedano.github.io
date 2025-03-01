@@ -353,4 +353,119 @@ footer {
     .theme-switch-wrapper {
         top: 60px;
     }
-} 
+}
+
+/* Blog Post Styles */
+.post-header {
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    margin-bottom: 0.5rem;
+}
+
+.post-content {
+    margin-bottom: 2rem;
+}
+
+.post-content h2 {
+    margin-top: 2rem;
+}
+
+.post-content h3 {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.post-content img {
+    max-width: 100%;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.post-content blockquote {
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.5rem;
+    border-left: 4px solid var(--blockquote-border);
+    background-color: var(--blockquote-bg);
+    font-style: italic;
+}
+
+.post-content pre {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    overflow-x: auto;
+    background-color: var(--code-bg);
+    border-radius: 3px;
+}
+
+.post-content code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 85%;
+}
+
+.post-content p code {
+    background-color: var(--code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+.post-tags {
+    margin: 2rem 0;
+}
+
+.post-tag {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.post-navigation a {
+    max-width: 45%;
+}
+
+.post-navigation .next {
+    margin-left: auto;
+}
+
+/* Syntax Highlighting */
+.highlight {
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    margin: 1.5rem 0;
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.highlight .k { color: #569cd6; } /* Keyword */
+.highlight .o { color: #d4d4d4; } /* Operator */
+.highlight .c1 { color: #6A9955; } /* Comment */
+.highlight .s { color: #ce9178; } /* String */
+.highlight .n { color: #d4d4d4; } /* Name */
+.highlight .p { color: #d4d4d4; } /* Punctuation */
+.highlight .mi { color: #b5cea8; } /* Number */
+
+/* Dark theme overrides */
+[data-theme="dark"] .highlight .k { color: #569cd6; }
+[data-theme="dark"] .highlight .o { color: #d4d4d4; }
+[data-theme="dark"] .highlight .c1 { color: #6A9955; }
+[data-theme="dark"] .highlight .s { color: #ce9178; }
+[data-theme="dark"] .highlight .n { color: #d4d4d4; }
+[data-theme="dark"] .highlight .p { color: #d4d4d4; }
+[data-theme="dark"] .highlight .mi { color: #b5cea8; } 

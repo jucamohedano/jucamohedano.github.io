@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="stylesheet" href="{{ "/css/styles.css" | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {% feed_meta %}
+    {% seo %}
+</head>
+<body>
+    <!-- Theme Switcher -->
+    <div class="theme-switch-wrapper">
+        <i class="fas fa-sun"></i>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <span class="slider"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="site-title">{{ site.title }}</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ "/" | relative_url }}">Home</a></li>
+                    <li><a href="{{ "/blog/" | relative_url }}">Blog</a></li>
+                    <li><a href="{{ "/#projects" | relative_url }}">Projects</a></li>
+                    <li><a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </header>
+
+        <main class="fade-in">
+            {{ content }}
+        </main>
+
+        <footer>
+            <p>&copy; {% assign date_format = site.minima.date_format | default: "%Y" %}{{ site.time | date: date_format }} {{ site.title }}. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ "/js/script.js" | relative_url }}"></script>
+</body>
+</html> 

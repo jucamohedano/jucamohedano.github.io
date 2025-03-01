@@ -27,4 +27,12 @@ npm-debug.log
 
 # Build folders if you add build tools later
 dist/
-build/ 
+build/
+
+# Jekyll specific
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+vendor/ 
