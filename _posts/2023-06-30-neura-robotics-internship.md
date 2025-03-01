@@ -16,7 +16,7 @@ Ever wondered what it's like to work at a cutting-edge robotics company? For six
 
 From January to June, I dove headfirst into the world of professional robotics development at NEURA Robotics, a company pushing the boundaries of cognitive robotics. As part of the R&D team, I got to work with their impressive MiPA robot - a versatile robot assistant designed for industrial and collaborative applications.
 
-![NEURA Robotics MiPA Robot](/assets/images/mipa.jpeg)
+![NEURA Robotics MiPA Robot](/assets/images/mipa.jpeg){:style="width: 50%;"}
 *The MiPA robot that I worked with during my internship. (You should replace this with an actual image of the MiPA robot)*
 
 ## My Projects and Responsibilities
