@@ -8,11 +8,12 @@ categories: [deep-learning, computer-vision]
 tags: [deep-learning, computer-vision, CLIP, GLIP]
 ---
 
-*By Juan Camacho and Samuele Bolotta*
-
 In our recent literature review, we explored a fascinating advancement in AI vision technology called Alpha-CLIP. This innovative model addresses one of the most persistent challenges in computer vision: getting AI to focus on specific regions of an image rather than processing everything at once. After studying this technology in depth, we've also developed two promising proposals to take this concept even further.
 
 <!--more-->
+
+*By Juan Camacho and Samuele Bolotta*
+
 ## The Problem: Lack of Focus in AI Vision
 
 Traditional AI vision systems like CLIP (Contrastive Language-Image Pre-training) excel at understanding the overall content of images, but they face significant limitations when it comes to region-specific tasks:
