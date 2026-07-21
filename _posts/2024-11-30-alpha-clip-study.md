@@ -6,6 +6,7 @@ reading_time: 15
 excerpt_separator: <!--more-->
 categories: [deep-learning, computer-vision]
 tags: [deep-learning, computer-vision, CLIP, GLIP]
+image: /assets/images/alpha_clip_teaser.png
 ---
 
 In our recent literature review, we explored a fascinating advancement in AI vision technology called Alpha-CLIP. This innovative model addresses one of the most persistent challenges in computer vision: getting AI to focus on specific regions of an image rather than processing everything at once. After studying this technology in depth, we've also developed two promising proposals to take this concept even further.

@@ -6,9 +6,10 @@ reading_time: 7
 excerpt_separator: <!--more-->
 categories: [robotics, career]
 tags: [robotics, ROS2, simulation, gazebo, MiPA, internship, deep-learning]
+image: /assets/images/mipa.jpeg
 ---
 
-Ever wondered what it's like to work at a cutting-edge robotics company? For six months, I had the incredible opportunity to join NEURA Robotics' R&D team as a Robotics Developer intern, working on their advanced MiPA robot platform! 🤖
+Ever wondered what it's like to work at a cutting-edge robotics company? For six months, I had the incredible opportunity to join NEURA Robotics' R&D team as a Robotics Developer intern, working on their advanced MiPA robot platform!
 
 <!--more-->
 
