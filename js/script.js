@@ -1,42 +1,32 @@
-// DOM Elements
-const themeSwitch = document.querySelector('#checkbox');
+const themeToggle = document.getElementById('theme-toggle');
 const htmlElement = document.documentElement;
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Check for saved theme preference and apply it
-const loadTheme = () => {
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme) {
-        htmlElement.setAttribute('data-theme', savedTheme);
-        if (savedTheme === 'dark') {
-            themeSwitch.checked = true;
-        }
-    } else {
-        // Check for system preference
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        if (prefersDarkScheme.matches) {
-            htmlElement.setAttribute('data-theme', 'dark');
-            themeSwitch.checked = true;
-            localStorage.setItem('theme', 'dark');
-        }
+const applyTheme = (theme) => {
+    htmlElement.setAttribute('data-theme', theme);
+    if (themeToggle) {
+        themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
     }
 };
 
-// Apply theme when page loads
-document.addEventListener('DOMContentLoaded', loadTheme);
+// Theme was already set pre-paint by the inline head script; sync the button icon
+applyTheme(htmlElement.getAttribute('data-theme') || (systemDark.matches ? 'dark' : 'light'));
 
-// Theme Switch
-if (themeSwitch) {
-    themeSwitch.addEventListener('change', () => {
-        if (themeSwitch.checked) {
-            htmlElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            htmlElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-        }
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const next = htmlElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
     });
 }
+
+// Follow OS theme changes live, unless the user picked a theme manually
+systemDark.addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+    }
+});
 
 // Animation on page load
 document.addEventListener('DOMContentLoaded', () => {
