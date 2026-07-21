@@ -31,6 +31,9 @@ Alpha-CLIP takes a different approach by integrating an additional "alpha channe
 
 In a standard digital image, we have red, green, and blue (RGB) channels that define colors. Alpha-CLIP adds a fourth channel—the alpha channel—creating an RGBA image where "A" highlights regions that deserve special attention.
 
+![Alpha-CLIP teaser figure](/assets/images/alpha_clip_teaser.png)
+*Alpha-CLIP in a nutshell: the alpha channel spotlights a region of interest across recognition, captioning, and generation tasks. Figure from the Alpha-CLIP project page.*
+
 This approach offers several key advantages:
 
 1. **Context preservation**: Unlike masking or cropping, Alpha-CLIP still processes the entire image
@@ -47,6 +50,9 @@ The Alpha-CLIP system was created through a careful development process:
 
 During training, Alpha-CLIP was exposed to both standard RGB images and the new RGBA images, ensuring it could handle both focused and general vision tasks.
 
+![Alpha-CLIP training pipeline](/assets/images/alpha_clip_pipeline.png)
+*The Alpha-CLIP data generation and fine-tuning pipeline. Figure from the Alpha-CLIP project page.*
+
 ## Alpha-CLIP's Impressive Capabilities
 
 Through our literature review, we found that Alpha-CLIP demonstrates remarkable performance across various tasks:
@@ -56,6 +62,9 @@ Through our literature review, we found that Alpha-CLIP demonstrates remarkable 
 - **Improved visual question answering**: When combined with LLaVA-1.5, answering detailed questions about specific image regions
 - **Region-specific captioning**: Generating descriptions for just the parts of an image that are highlighted
 - **Controlled generation**: Enabling precise control in both 2D and 3D generation tasks when integrated with NeRF and diffusion models
+
+![Region-focused recognition examples](/assets/images/alpha_clip_recog_demo.png)
+*Region-focused recognition in action: the prediction follows the highlighted region. Figure from the Alpha-CLIP project page.*
 
 ## Our Proposals for Improvement
 
