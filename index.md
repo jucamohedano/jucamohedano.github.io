@@ -3,7 +3,6 @@ layout: default
 ---
 
 <section class="bio">
-    <img src="assets/images/profile_pic.png" alt="{{ site.title }}" style="width: 450px; height: 450px;">
     <p>
         Hello! This is Juan :)
     </p>

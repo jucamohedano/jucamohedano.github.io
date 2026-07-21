@@ -1,6 +1,4 @@
 // DOM Elements
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav ul');
 const themeSwitch = document.querySelector('#checkbox');
 const htmlElement = document.documentElement;
 
@@ -39,23 +37,6 @@ if (themeSwitch) {
         }
     });
 }
-
-// Toggle mobile menu
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-}
-
-// Close mobile menu when clicking on a menu item
-const navLinks = document.querySelectorAll('nav ul li a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
 
 // Animation on page load
 document.addEventListener('DOMContentLoaded', () => {

@@ -26,20 +26,14 @@
 
     <div class="container">
         <header>
+            <a class="header-photo" href="{{ "/" | relative_url }}"><img src="{{ "/assets/images/profile_pic.png" | relative_url }}" alt="{{ site.title }}"></a>
             <h1 class="site-title">{{ site.title }}</h1>
-            <nav>
-                <ul>
-                    <li><a href="{{ "/" | relative_url }}">Home</a></li>
-                    <li><a href="{{ "/projects/" | relative_url }}">Projects</a></li>
-                    <li><a href="{{ "/assets/files/Juan_Camacho_CV.pdf" | relative_url }}" target="_blank">CV <i class="fas fa-file-pdf"></i></a></li>
-                    <li><a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a></li>
-                </ul>
+            <nav class="pill-nav">
+                <a class="pill{% if page.url == "/" %} active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
+                <a class="pill{% if page.url == "/projects/" %} active{% endif %}" href="{{ "/projects/" | relative_url }}">Projects</a>
+                <a class="pill" href="{{ "/assets/files/Juan_Camacho_CV.pdf" | relative_url }}" target="_blank">CV <i class="fas fa-file-pdf"></i></a>
+                <a class="pill" href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
             </nav>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </header>
 
         <main class="fade-in">
