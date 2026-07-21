@@ -18,6 +18,7 @@
     --accent: #0366d6;
     --callout-bg: #eef4fc;
     --callout-border: #d3e3f8;
+    --code-accent: #b3255e;
 }
 
 /* Dark Theme */
@@ -39,6 +40,7 @@
     --accent: #58a6ff;
     --callout-bg: #14212f;
     --callout-border: #24405e;
+    --code-accent: #f27da2;
 }
 
 /* No-JS fallback: follow the OS theme when JS never set data-theme */
@@ -61,6 +63,7 @@
         --accent: #58a6ff;
         --callout-bg: #14212f;
         --callout-border: #24405e;
+        --code-accent: #f27da2;
     }
 
     html:not([data-theme]) .post-meta,
@@ -89,7 +92,7 @@ body {
 }
 
 .container {
-    max-width: 660px;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -153,8 +156,8 @@ header {
 }
 
 .header-photo img {
-    width: 96px;
-    height: 96px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -366,8 +369,8 @@ footer {
 
 @media (max-width: 700px) {
     .header-photo img {
-        width: 72px;
-        height: 72px;
+        width: 100px;
+        height: 100px;
     }
 
     .site-title {
@@ -390,11 +393,17 @@ footer {
 
 .post-content h2 {
     margin-top: 2rem;
+    color: var(--accent);
 }
 
 .post-content h3 {
     margin-top: 1.5rem;
     font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.post-content strong {
+    color: var(--heading-color);
 }
 
 .post-content img {
@@ -412,7 +421,7 @@ footer {
 .post-content blockquote {
     margin: 1.5rem 0;
     padding: 0.5rem 1.5rem;
-    border-left: 4px solid var(--blockquote-border);
+    border-left: 4px solid var(--accent);
     background-color: var(--blockquote-bg);
     font-style: italic;
 }
@@ -434,20 +443,11 @@ footer {
     background-color: var(--code-bg);
     padding: 0.2em 0.4em;
     border-radius: 3px;
+    color: var(--code-accent);
 }
 
-.post-tags {
-    margin: 2rem 0;
-}
-
-.post-tag {
-    display: inline-block;
-    padding: 0.3rem 0.7rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    background-color: var(--code-bg);
-    border-radius: 3px;
-    font-size: 0.8rem;
+.post-content li code {
+    color: var(--code-accent);
 }
 
 .post-navigation {
