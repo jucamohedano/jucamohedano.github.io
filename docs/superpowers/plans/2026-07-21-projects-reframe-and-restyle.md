@@ -19,6 +19,7 @@
 - **Theme:** existing CSS-variable architecture (`:root` + `[data-theme="dark"]`) is kept and extended, never replaced.
 - **Bio content:** keep the user's casual voice verbatim, including the "Genuinly" spelling — the user explicitly chose *not* to have typos fixed. Only the changes named in tasks below.
 - **Verification:** there is no test framework. Every task verifies with `bundle exec jekyll build` (run from the repo root) plus `grep`/`test` checks against the generated `_site/` output. A task is not done until its checks pass.
+- **Verification amendment (2026-07-21, user-approved):** local Jekyll builds are unavailable on this machine (system Ruby 2.7 < required 3.0). SKIP every `bundle install` / `bundle exec jekyll ...` step and every check against `_site/` or a local server. Instead run the equivalent `grep` checks against the SOURCE files named in each task, and review Liquid syntax carefully by reading it. Server-side verification happens on GitHub Pages after merge and push (the site deploys via classic Pages, which builds with GitHub's own gem set). Task 7's endpoint checks run against the live site after push instead of localhost.
 - **Commits:** one commit per task, message ending with:
   `Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>`
 - **Note:** `index.md` already has uncommitted user edits (the rewritten bio). Task 1 builds on and commits them intentionally.
