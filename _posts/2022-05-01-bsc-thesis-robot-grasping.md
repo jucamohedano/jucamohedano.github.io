@@ -6,9 +6,10 @@ reading_time: 8
 excerpt_separator: <!--more-->
 categories: [robotics, projects]
 tags: [robotics, TIAGo, 6DoF, grasping, computer-vision, deep-learning, RoboCup]
+image: /assets/images/contact_graspnet_inference_example.png
 ---
 
-Ever wondered how robots pick up objects without dropping or crushing them? That's exactly what I spent months figuring out for my BSc thesis at the University of Leeds! 🤖🦾
+Ever wondered how robots pick up objects without dropping or crushing them? That's exactly what I spent months figuring out for my BSc thesis at the University of Leeds!
 
 <!--more-->
 

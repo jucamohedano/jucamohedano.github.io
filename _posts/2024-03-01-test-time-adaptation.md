@@ -6,9 +6,10 @@ reading_time: 8
 excerpt_separator: <!--more-->
 categories: [machine-learning, research, projects]
 tags: [test-time-adaptation, vision-language-models, CLIP, distribution-shift, cache-based-adaptation]
+image: /assets/images/tda_waiting_list.png
 ---
 
-Hello fellow ML enthusiasts! 👋 I'm excited to share our journey exploring the fascinating world of Test-Time Adaptation (TTA) that I embarked on with my amazing teammates Samuele Bolotta and Andrea De Carlo during our master's program. Get ready for some real talk about making stubborn ML models more flexible in the wild!
+Hello fellow ML enthusiasts! I'm excited to share our journey exploring the fascinating world of Test-Time Adaptation (TTA) that I embarked on with my amazing teammates Samuele Bolotta and Andrea De Carlo during our master's program. Get ready for some real talk about making stubborn ML models more flexible in the wild!
 
 <!--more-->
 
@@ -39,7 +40,7 @@ Why TDA caught our attention:
 - It manages both **positive** and **negative** caches (knowing what something is NOT can be just as valuable)
 - It's computationally efficient (no grad student wants to wait 3 days for results!)
 
-## Experiments: The Fun Part! 🧪
+## Experiments: The Fun Part!
 
 We tested TDA across various datasets, including:
 
