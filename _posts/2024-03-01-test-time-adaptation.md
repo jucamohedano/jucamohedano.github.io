@@ -50,6 +50,9 @@ We tested TDA across various datasets, including:
 
 Our experiments covered both i.i.d. (independent and identically distributed) and non-i.i.d. data streams. The latter is particularly challenging because samples are temporally correlated - just like in real life!
 
+![TDA accuracy on the Cross-Domain benchmark](/assets/images/tda_cd_benchmark.png)
+*TDA performance across the Cross-Domain benchmark datasets from our experiments.*
+
 ### The Hyperparameter Rabbit Hole
 
 Oh, the joys of hyperparameter tuning! We performed extensive ablation studies to understand how different parameters affect performance:
@@ -60,6 +63,9 @@ Oh, the joys of hyperparameter tuning! We performed extensive ablation studies t
 
 One interesting finding: when using the positive cache, accuracy improves as α approaches 1, suggesting that prior knowledge from the base model (CLIP in our case) and few-shot knowledge from the cache are equally important.
 
+![Positive cache hyperparameter ablations](/assets/images/tda_positive_hyperparams.png)
+*Our ablations on the positive cache: accuracy as the residual ratio and sharpness ratio vary.*
+
 For the negative cache, we found that a strong presence can sometimes worsen performance depending on the dataset.
 
 ## Our Innovation: The Waiting List
@@ -67,6 +73,9 @@ For the negative cache, we found that a strong presence can sometimes worsen per
 After many late-night discussions (and possibly too much pizza), we had an idea: what if we could prioritize processing confident samples first, while putting uncertain ones on a "waiting list" for later?
 
 Our hypothesis was that revisiting uncertain samples after refining the cache with confident predictions might lead to more informed decisions.
+
+![Waiting list mechanism diagram](/assets/images/tda_waiting_list.png)
+*The waiting list mechanism: confident samples update the cache first, and uncertain samples are revisited once the cache has improved.*
 
 The results?
 - On ImageNet, the waiting list approach showed improvements! It helped capture more relevant features for samples in the waiting list.
