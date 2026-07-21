@@ -62,7 +62,7 @@ One interesting finding: when using the positive cache, accuracy improves as α 
 
 For the negative cache, we found that a strong presence can sometimes worsen performance depending on the dataset.
 
-## Our Innovation: The Waiting List ⏱️
+## Our Innovation: The Waiting List
 
 After many late-night discussions (and possibly too much pizza), we had an idea: what if we could prioritize processing confident samples first, while putting uncertain ones on a "waiting list" for later?
 
@@ -89,6 +89,6 @@ For future work, we're excited about further exploring if the waiting list appro
 
 Test-Time Adaptation is a promising field that addresses a real-world problem in ML deployment. Our experiments with Training Dynamic Adapter and our waiting list innovation show that there's significant potential for making models more robust in the wild without expensive retraining.
 
-Special thanks to my amazing teammates Samuele Bolotta and Andrea De Carlo for making this journey both educational and fun. Here's to more adventures in the ML wilderness! 🚀
+Special thanks to my amazing teammates Samuele Bolotta and Andrea De Carlo for making this journey both educational and fun. Here's to more adventures in the ML wilderness!
 
 If you're interested in checking out our code and implementation details, the project is available on [GitHub](https://github.com/jucamohedano/my_TDA). 
