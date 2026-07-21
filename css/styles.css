@@ -408,8 +408,21 @@ footer {
 }
 
 /* Blog Post Styles */
+.post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .post-header {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.post-header .post-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .post-title {
@@ -421,8 +434,12 @@ footer {
 }
 
 .post-content h2 {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     color: var(--accent);
+}
+
+.post-content li {
+    margin-bottom: 0.4rem;
 }
 
 .post-content h3 {
