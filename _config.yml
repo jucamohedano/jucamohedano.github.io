@@ -28,4 +28,5 @@ exclude:
   - .git
   - README.md
   - LICENSE
-  - backups 
+  - backups
+  - docs 
