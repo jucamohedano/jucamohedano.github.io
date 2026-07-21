@@ -11,8 +11,10 @@ layout: default
         On my way to making GPUs go brrr!
         Was very excited that I got access to a cluster with lots of gpus to run my thesis experiments.
         I do like multimodal models and LLMs in general.
-        I'm tweaking LLMs at the moment: did some post-training with GRPO and now exploration of the data manifold of an LLM via sampling.
     </p>
+    <div class="now-box">
+        <p><span class="pulse-dot" aria-hidden="true"></span><strong>Currently:</strong> tweaking LLMs — post-training with GRPO, and exploring the data manifold of an LLM via sampling.</p>
+    </div>
     <p>
         Working on my AI Systems MSc at the University of Trento.
     </p>

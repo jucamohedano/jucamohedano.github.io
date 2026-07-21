@@ -15,6 +15,9 @@
     --pill-track-bg: #f1f1f2;
     --pill-active-bg: #ffffff;
     --pill-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --accent: #0366d6;
+    --callout-bg: #eef4fc;
+    --callout-border: #d3e3f8;
 }
 
 /* Dark Theme */
@@ -33,6 +36,9 @@
     --pill-track-bg: #242428;
     --pill-active-bg: #38383e;
     --pill-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --accent: #58a6ff;
+    --callout-bg: #14212f;
+    --callout-border: #24405e;
 }
 
 /* Reset */
@@ -174,6 +180,45 @@ section {
 /* Bio Section */
 .bio {
     margin-bottom: 2.5rem;
+}
+
+/* "Currently" callout */
+.now-box {
+    background-color: var(--callout-bg);
+    border: 1px solid var(--callout-border);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.now-box p {
+    margin: 0;
+}
+
+.pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    margin-right: 0.5rem;
+    vertical-align: 2px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pulse-dot {
+        animation: none;
+    }
+
+    .fade-in {
+        animation: none;
+    }
 }
 
 /* Theme Switcher */
