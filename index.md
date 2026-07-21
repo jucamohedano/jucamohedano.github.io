@@ -5,16 +5,20 @@ layout: default
 <section class="bio">
     <img src="assets/images/profile_pic.png" alt="{{ site.title }}" style="width: 450px; height: 450px;">
     <p>
-        Hello! I'm <strong>Juan Camacho Mohedano</strong>, an AI researcher and robotics enthusiast passionate about pushing the boundaries of intelligent systems. 🚀
+        Hello! This is Juan :)
     </p>
     <p>
-        Currently pursuing my MSc in AI Systems at the University of Trento, I'm exploring cutting-edge research in AI Agents, Large Language Models (LLMs), and Vision-Language Models (VLMs). My journey in AI has taken me from building CNN-based classifiers to implementing advanced test-time adaptation techniques for vision models.
+        Genuinly interested in AI research and the engineering aspect of it.
+        On my way to making GPUs go brrr!
+        Was very excited that I got access to a cluster with lots of gpus to run my thesis experiments.
+        I do like multimodal models and LLMs in general.
+        I'm tweaking LLMs at the moment: did some post-training with GRPO and now exploration of the data manifold of an LLM via sampling.
     </p>
     <p>
-        With experience at NEURA Robotics in Germany and a background in robotics competitions (RoboCup), I blend theoretical knowledge with practical applications. My work spans from 6DoF robot grasping to customizing RAG applications for optimized vector search retrieval.
+        Working on my AI Systems MSc at the University of Trento.
     </p>
     <p>
-        I'm always excited to collaborate on projects that leverage AI to solve real-world problems, particularly at the intersection of computer vision, natural language processing, and robotics.
+        Experience at NEURA Robotics and COVAP.
     </p>
 </section>
 
