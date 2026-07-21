@@ -16,17 +16,27 @@ applyTheme(htmlElement.getAttribute('data-theme') || (systemDark.matches ? 'dark
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
         const next = htmlElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        localStorage.setItem('theme', next);
         applyTheme(next);
+        try {
+            localStorage.setItem('theme', next);
+        } catch (err) {
+            // Storage blocked: theme still switches for this page view
+        }
     });
 }
 
 // Follow OS theme changes live, unless the user picked a theme manually
-systemDark.addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) {
-        applyTheme(e.matches ? 'dark' : 'light');
-    }
-});
+if (systemDark.addEventListener) {
+    systemDark.addEventListener('change', (e) => {
+        let stored = null;
+        try {
+            stored = localStorage.getItem('theme');
+        } catch (err) {}
+        if (!stored) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+}
 
 // Animation on page load
 document.addEventListener('DOMContentLoaded', () => {
