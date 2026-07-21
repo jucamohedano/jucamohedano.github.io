@@ -15,16 +15,6 @@ layout: default
     {{ content }}
   </div>
 
-  {% if page.tags.size > 0 %}
-  <div class="post-tags">
-    <p>Tags: 
-      {% for tag in page.tags %}
-      <span class="post-tag">{{ tag }}</span>
-      {% endfor %}
-    </p>
-  </div>
-  {% endif %}
-
   <div class="post-navigation">
     {% if page.previous.url %}
     <a class="prev" href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
