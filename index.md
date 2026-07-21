@@ -52,6 +52,9 @@ layout: default
             <strong><a href="/blog/2024/03/01/test-time-adaptation/">Test-Time Adaptation for Vision-Language Models</a></strong> - Analysis and improvement of efficient adaptation techniques for vision models facing distribution shifts. Benchmarked failure cases and implemented waiting list mechanism to improve performance on non-IID data streams.
         </li>
         <li>
+            <strong><a href="/blog/2023/06/30/neura-robotics-internship/">R&D Internship at NEURA Robotics</a></strong> - Six months on the MiPA cognitive robot platform: ROS2, Gazebo simulation, and deep-learning perception for a commercial robot assistant.
+        </li>
+        <li>
             <strong><a href="/blog/2022/05/01/bsc-thesis-robot-grasping/">6DoF Robot Grasping with TIAGo</a></strong> - My BSc thesis project on teaching robots to grasp objects using deep learning and computer vision. Developed for the LASR team and RoboCup competitions.
         </li>
     </ul>
