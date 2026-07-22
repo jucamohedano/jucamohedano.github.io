@@ -456,7 +456,6 @@ footer {
     max-width: 100%;
     display: block;
     margin: 1.5rem auto;
-    cursor: pointer;
     transition: opacity 0.3s ease;
 }
 
@@ -567,7 +566,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -580,30 +579,56 @@ footer {
 
 .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
     margin: auto;
 }
 
+/* Grow to the viewport, never past the source's own resolution */
 .lightbox-image {
-    max-width: 100%;
-    max-height: 90vh;
+    display: block;
+    max-width: 96vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Vector figures have no native size to respect — fill the viewport */
+.lightbox-figure svg {
+    display: block;
+    width: min(96vw, 1500px);
+    max-height: 92vh;
+    height: auto;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.post-content img,
+.post-content .figure-svg svg {
+    cursor: zoom-in;
+}
+
 .lightbox-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
+    position: fixed;
+    top: 16px;
+    right: 24px;
     color: white;
-    font-size: 30px;
+    font-size: 34px;
+    line-height: 1;
     font-weight: bold;
     cursor: pointer;
     background: none;
     border: none;
     padding: 5px;
     transition: transform 0.2s ease;
+}
+
+.lightbox-close:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
 }
 
 .lightbox-close:hover {
