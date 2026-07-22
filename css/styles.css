@@ -19,6 +19,13 @@
     --callout-bg: #eef4fc;
     --callout-border: #d3e3f8;
     --code-accent: #b3255e;
+    --viz-panel: #fbfcfd;
+    --viz-muted: #767676;
+    --viz-1: #dbe8f8;
+    --viz-2: #a9c8ee;
+    --viz-3: #6fa1e0;
+    --viz-4: #3878cc;
+    --viz-5: #14508f;
 }
 
 /* Dark Theme */
@@ -41,6 +48,13 @@
     --callout-bg: #14212f;
     --callout-border: #24405e;
     --code-accent: #f27da2;
+    --viz-panel: #202024;
+    --viz-muted: #9a9a9a;
+    --viz-1: #16283c;
+    --viz-2: #1d4a75;
+    --viz-3: #2f72b4;
+    --viz-4: #559fe6;
+    --viz-5: #93c8ff;
 }
 
 /* No-JS fallback: follow the OS theme when JS never set data-theme */
@@ -64,6 +78,13 @@
         --callout-bg: #14212f;
         --callout-border: #24405e;
         --code-accent: #f27da2;
+        --viz-panel: #202024;
+        --viz-muted: #9a9a9a;
+        --viz-1: #16283c;
+        --viz-2: #1d4a75;
+        --viz-3: #2f72b4;
+        --viz-4: #559fe6;
+        --viz-5: #93c8ff;
     }
 
     html:not([data-theme]) .post-meta,
@@ -475,6 +496,11 @@ footer {
     max-width: 560px;
     height: auto;
     margin: 0 auto;
+    font-family: "Red Hat Display", -apple-system, Helvetica, Arial, sans-serif;
+}
+
+.figure-svg.wide svg {
+    max-width: 100%;
 }
 
 .post-content blockquote {
