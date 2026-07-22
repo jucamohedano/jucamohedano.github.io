@@ -10,6 +10,7 @@
 \usepackage{newpxtext}                 % Palatino-style serif
 \usepackage[margin=17mm,top=13mm,bottom=10mm]{geometry}
 \usepackage{fontawesome5}
+\usepackage{graphicx}
 \usepackage{pifont}
 \usepackage{enumitem}
 \usepackage{xcolor}
@@ -49,6 +50,8 @@
                   label=\footnotesize\ding{117}}
 
 \newcommand{\role}[1]{\textit{#1}}
+% Hugging Face mark, sized to sit on the text baseline like the icon glyphs
+\newcommand{\hficon}{\raisebox{-0.4ex}{\includegraphics[height=1.7ex]{hf-logo.png}}}
 
 % ══════════════════════════════════════════════════════════════════════════
 \begin{document}
@@ -60,12 +63,13 @@
 \hfill
 \begin{minipage}[b]{0.42\textwidth}
   \raggedleft\small\itshape
-  \faEnvelope[regular]~\href{mailto:jucamohedano@gmail.com}{jucamohedano@gmail.com}\\[1.5mm]
-  \faGithub~\href{https://github.com/jucamohedano}{jucamohedano}\\[1.5mm]
-  \faGlobe~\href{https://jucamohedano.github.io}{jucamohedano.github.io}
+  \faEnvelope[regular]~\href{mailto:jucamohedano@gmail.com}{jucamohedano@gmail.com}\\[0.9mm]
+  \faGithub~\href{https://github.com/jucamohedano}{jucamohedano}\\[0.9mm]
+  \faGlobe~\href{https://jucamohedano.github.io}{jucamohedano.github.io}\\[0.9mm]
+  \hficon~\href{https://huggingface.co/jucamohedano}{huggingface.co/jucamohedano}
 \end{minipage}
 
-\vspace{2mm}
+\vspace{1mm}
 
 % ── research interests ────────────────────────────────────────────────────
 \cvsection{Research Interests}
