@@ -5,6 +5,7 @@ date: 2025-07-31
 excerpt_separator: <!--more-->
 categories: [applied-ai, internships]
 tags: [agentic-workflows, CrewAI, RAG, GraphRAG, document-processing, OpenWebUI, multimodal]
+image: /assets/images/covap_logo.png
 ---
 
 Research problems come with a benchmark. Business problems come with a person who spends thirty minutes a day checking documents by hand. During my internship at COVAP I worked on the second kind: building agentic AI workflows to automate document-heavy processes at a large Spanish agri-food cooperative.
