@@ -91,6 +91,8 @@ If the knowledge is in there, can we get it out reliably? Three attempts, three 
 
 The thread running through all of it is that measurement instruments have opinions. A lenient judge and a strict audit ranked the same four models on the same data in different orders, and neither ranking is wrong — they answer different questions. Open-world systems should be measured with several metrics under several notions of correctness, and **the gap between those measurements is often the most informative quantity you have**. The distance between what a model knows and what it says is exactly where the interesting research problems live.
 
+The code for the whole thing — the sampling harness, the judge, the taxonomy mapping and the GRPO training — is at [oven-mllm-eval](https://github.com/jucamohedano/oven-mllm-eval).
+
 ---
 
 ### Sources
