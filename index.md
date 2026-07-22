@@ -46,7 +46,7 @@ layout: default
 <section id="projects">
     <h2>Projects</h2>
     <ul class="project-cards">
-        <li class="project-card">
+        <li class="project-card d-vlm">
             <div class="pc-top">
                 <span class="pc-kind">MSc thesis</span>
                 <span class="pc-year">2026</span>
@@ -61,7 +61,7 @@ layout: default
                 <a href="https://github.com/jucamohedano/oven-mllm-eval" target="_blank" rel="noopener">Code</a>
             </div>
         </li>
-        <li class="project-card">
+        <li class="project-card d-nesy">
             <div class="pc-top">
                 <span class="pc-kind">Advanced ML</span>
                 <span class="pc-year">2026</span>
@@ -76,7 +76,7 @@ layout: default
                 <a href="https://github.com/jucamohedano/rsbench-code/tree/raven" target="_blank" rel="noopener">Code</a>
             </div>
         </li>
-        <li class="project-card">
+        <li class="project-card d-interp">
             <div class="pc-top">
                 <span class="pc-kind">Neural systems</span>
                 <span class="pc-year">2026</span>
@@ -92,7 +92,7 @@ layout: default
                 <a href="https://huggingface.co/datasets/jucamohedano/Qwen3-30B-A3B-Instruct-2507_custom_60_cot" target="_blank" rel="noopener">Dataset</a>
             </div>
         </li>
-        <li class="project-card">
+        <li class="project-card d-vlm">
             <div class="pc-top">
                 <span class="pc-kind">Literature review</span>
                 <span class="pc-year">2024</span>
@@ -106,7 +106,7 @@ layout: default
                 <a href="/blog/2024/11/30/alpha-clip-study/">Write-up</a>
             </div>
         </li>
-        <li class="project-card">
+        <li class="project-card d-vlm">
             <div class="pc-top">
                 <span class="pc-kind">Course project</span>
                 <span class="pc-year">2024</span>
@@ -121,21 +121,7 @@ layout: default
                 <a href="https://github.com/jucamohedano/my_TDA" target="_blank" rel="noopener">Code</a>
             </div>
         </li>
-        <li class="project-card">
-            <div class="pc-top">
-                <span class="pc-kind">Internship</span>
-                <span class="pc-year">2023</span>
-            </div>
-            <h3 class="pc-title"><a href="/blog/2023/06/30/neura-robotics-internship/">R&amp;D at NEURA Robotics</a></h3>
-            <p class="pc-desc">Six months on the MiPA cognitive robot platform: modular robot description in Gazebo, a drift-correcting physics plugin, and ROS 2 servers for low-level control.</p>
-            <ul class="pc-tags">
-                <li>Robotics</li><li>ROS 2</li><li>Simulation</li>
-            </ul>
-            <div class="pc-links">
-                <a href="/blog/2023/06/30/neura-robotics-internship/">Write-up</a>
-            </div>
-        </li>
-        <li class="project-card">
+        <li class="project-card d-robotics">
             <div class="pc-top">
                 <span class="pc-kind">BSc thesis</span>
                 <span class="pc-year">2022</span>
@@ -147,6 +133,40 @@ layout: default
             </ul>
             <div class="pc-links">
                 <a href="/blog/2022/05/01/bsc-thesis-robot-grasping/">Write-up</a>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section id="internships">
+    <h2>Internships</h2>
+    <ul class="project-cards">
+        <li class="project-card d-applied">
+            <div class="pc-top">
+                <span class="pc-kind">COVAP</span>
+                <span class="pc-year">2025</span>
+            </div>
+            <h3 class="pc-title">AI Workflows for Business Automation</h3>
+            <p class="pc-desc">Built two agentic workflows for a large agri-food cooperative: a CrewAI budget-analysis pipeline that cut document validation from 30 minutes to under 5, and a multimodal export-validation chain that cross-checks orders, shipping PDFs and product-tag photos before goods leave.</p>
+            <ul class="pc-tags">
+                <li>Agentic workflows</li><li>CrewAI</li><li>RAG</li><li>Multimodal</li>
+            </ul>
+            <div class="pc-links">
+                <a href="/blog/2025/07/31/covap-ai-internship/">Write-up</a>
+            </div>
+        </li>
+        <li class="project-card d-robotics">
+            <div class="pc-top">
+                <span class="pc-kind">NEURA Robotics</span>
+                <span class="pc-year">2023</span>
+            </div>
+            <h3 class="pc-title"><a href="/blog/2023/06/30/neura-robotics-internship/">R&amp;D on the MiPA Robot Platform</a></h3>
+            <p class="pc-desc">Six months on the MiPA cognitive robot platform: modular robot description in Gazebo, a drift-correcting physics plugin, and ROS 2 servers for low-level control.</p>
+            <ul class="pc-tags">
+                <li>Robotics</li><li>ROS 2</li><li>Simulation</li>
+            </ul>
+            <div class="pc-links">
+                <a href="/blog/2023/06/30/neura-robotics-internship/">Write-up</a>
             </div>
         </li>
     </ul>
