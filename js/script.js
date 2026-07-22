@@ -84,33 +84,47 @@ function initLightbox() {
     
     const lightboxImg = document.createElement('img');
     lightboxImg.className = 'lightbox-image';
-    
+
+    // Inline SVG figures are cloned in here instead of loaded as an image
+    const lightboxFigure = document.createElement('div');
+    lightboxFigure.className = 'lightbox-figure';
+
     const closeButton = document.createElement('button');
     closeButton.className = 'lightbox-close';
     closeButton.innerHTML = '&times;';
-    
+
     // Append elements to DOM
     lightboxContent.appendChild(lightboxImg);
+    lightboxContent.appendChild(lightboxFigure);
     lightboxContent.appendChild(closeButton);
     lightbox.appendChild(lightboxContent);
     document.body.appendChild(lightbox);
-    
-    // Get all images in post content
-    const postImages = document.querySelectorAll('.post-content img');
-    
-    // Add click event to images
-    postImages.forEach(img => {
+
+    const openLightbox = () => {
+        setTimeout(() => lightbox.classList.add('active'), 10);
+        document.body.style.overflow = 'hidden';
+    };
+
+    document.querySelectorAll('.post-content img').forEach(img => {
         img.addEventListener('click', () => {
+            lightboxFigure.innerHTML = '';
+            lightboxFigure.style.display = 'none';
+            lightboxImg.style.display = '';
             lightboxImg.src = img.src;
             lightboxImg.alt = img.alt || 'Enlarged image';
-            
-            // Show lightbox with slight delay for transition
-            setTimeout(() => {
-                lightbox.classList.add('active');
-            }, 10);
-            
-            // Prevent scrolling of the page
-            document.body.style.overflow = 'hidden';
+            openLightbox();
+        });
+    });
+
+    // Inline SVG diagrams: clone the vector so it scales to the viewport crisply
+    document.querySelectorAll('.figure-svg svg').forEach(svg => {
+        svg.addEventListener('click', () => {
+            lightboxImg.style.display = 'none';
+            lightboxImg.removeAttribute('src');
+            lightboxFigure.style.display = '';
+            lightboxFigure.innerHTML = '';
+            lightboxFigure.appendChild(svg.cloneNode(true));
+            openLightbox();
         });
     });
     
@@ -131,6 +145,7 @@ function initLightbox() {
     
     function closeLightbox() {
         lightbox.classList.remove('active');
+        lightboxFigure.innerHTML = '';
         // Re-enable scrolling
         document.body.style.overflow = '';
     }
