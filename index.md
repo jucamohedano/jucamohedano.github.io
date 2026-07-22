@@ -47,6 +47,9 @@ layout: default
     <h2>Projects</h2>
     <ul class="project-list">
         <li>
+            <strong><a href="/blog/2026/06/22/reasoning-shortcuts-raven/">Reasoning Shortcuts in Neuro-Symbolic Models on RAVEN</a></strong> - Extended the rsbench benchmark to Raven's Progressive Matrices: built a reduced RAVEN dataset, a DeepProbLog solver, and showed it reaches high answer accuracy while grounding only one of three concepts - a textbook reasoning shortcut, fixed with 1% concept supervision.
+        </li>
+        <li>
             <strong><a href="/blog/2024/11/30/alpha-clip-study/">Alpha-CLIP: A Breakthrough in Region-Focused AI Vision</a></strong> - A literature review exploring Alpha-CLIP's capabilities in region-focused AI vision and proposing enhancements for improved performance.
         </li>
         <li>
