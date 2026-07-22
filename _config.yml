@@ -29,4 +29,6 @@ exclude:
   - README.md
   - LICENSE
   - backups
-  - docs 
+  - docs
+  - AGENTS.md
+  - CLAUDE.md 
