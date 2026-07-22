@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Putting AI Agents to Work in a Food Cooperative"
+title: "Putting AI Agents to Work in a Livestock Cooperative"
 date: 2025-07-31
 excerpt_separator: <!--more-->
 categories: [applied-ai, internships]
@@ -8,11 +8,13 @@ tags: [agentic-workflows, CrewAI, RAG, GraphRAG, document-processing, OpenWebUI,
 image: /assets/images/covap_logo.png
 ---
 
-Research problems come with a benchmark. Business problems come with a person who spends thirty minutes a day checking documents by hand. During my internship at COVAP I worked on the second kind: building agentic AI workflows to automate document-heavy processes at a large Spanish agri-food cooperative.
+Research problems come with a benchmark. Business problems come with a person who spends thirty minutes a day checking documents by hand. During my internship at COVAP I worked on the second kind: building agentic AI workflows to automate document-heavy processes at one of Spain's largest livestock cooperatives.
 
 <!--more-->
 
 *Internship at COVAP, May to July 2025.*
+
+COVAP — *Cooperativa Ganadera del Valle de los Pedroches* — is a livestock cooperative founded in 1959 and owned by its member farmers, who raise dairy cattle, sheep, beef and acorn-fed 100% Ibérico pigs across the dehesa of northern Córdoba. It runs the chain from animal feed through to dairy, cheese and meat production, and exports to around thirty countries. That last detail matters for the second project below.
 
 ## Two Workflows
 
@@ -20,7 +22,7 @@ Research problems come with a benchmark. Business problems come with a person wh
 
 The result that mattered to the department wasn't a metric on a leaderboard: validation time per document went from around thirty minutes to under five, better than an 80% saving, with a human-in-the-loop verification step kept at the end. That last part is the design decision I'd defend hardest — the point was never to remove the person, it was to stop them spending their day on the mechanical part.
 
-**Export validation.** The second workflow addresses a genuinely expensive failure mode: documentation errors that get a shipment rejected at customs. I designed a multi-step validation chain that uses multimodal models to check consistency across the original order, the various shipping PDFs, and photographs of the physical product tags. If those three disagree, you want to know before the goods leave, not after.
+**Export validation.** The second workflow addresses a genuinely expensive failure mode for a cooperative shipping meat and dairy to thirty-odd countries: documentation errors that get a shipment rejected at customs. I designed a multi-step validation chain that uses multimodal models to check consistency across the original order, the various shipping PDFs, and photographs of the physical product tags. If those three disagree, you want to know before the goods leave, not after.
 
 ## Making It Reachable
 

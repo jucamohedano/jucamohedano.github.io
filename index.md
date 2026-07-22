@@ -147,7 +147,7 @@ layout: default
                 <span class="pc-year">2025</span>
             </div>
             <h3 class="pc-title">AI Workflows for Business Automation</h3>
-            <p class="pc-desc">Built two agentic workflows for a large agri-food cooperative: a CrewAI budget-analysis pipeline that cut document validation from 30 minutes to under 5, and a multimodal export-validation chain that cross-checks orders, shipping PDFs and product-tag photos before goods leave.</p>
+            <p class="pc-desc">Built two agentic workflows for one of Spain's largest livestock cooperatives: a CrewAI budget-analysis pipeline that cut document validation from 30 minutes to under 5, and a multimodal export-validation chain that cross-checks orders, shipping PDFs and product-tag photos before goods leave.</p>
             <ul class="pc-tags">
                 <li>Agentic workflows</li><li>CrewAI</li><li>RAG</li><li>Multimodal</li>
             </ul>
