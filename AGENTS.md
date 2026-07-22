@@ -40,7 +40,7 @@ One layout shell, one stylesheet, one script — no theme, no framework.
 1. Create `_posts/YYYY-MM-DD-slug.md` with front matter: `layout: post`, `title`, `date`, `excerpt_separator: <!--more-->`, `categories`, `tags`, and `image:` (the thumbnail).
 2. Put `<!--more-->` after the intro paragraph — everything above it becomes the excerpt on `/projects/`.
 3. Add an entry at the TOP of the homepage `index.md` project list.
-4. Figures: `![alt](/assets/images/...)` followed by an italic `*caption*` line on the next line; attribute third-party figures in the caption. Process images with ImageMagick (`convert`/`mogrify`): ≤1000px wide, alpha flattened to white, ideally under ~150KB.
+4. Figures: `![alt](/assets/images/...)` followed by an italic `*caption*` line on the next line; attribute third-party figures in the caption. Process images with ImageMagick (`convert`/`mogrify`): alpha flattened to white, `-strip`, then `optipng -o2`. **Export at ~1400-1800px wide, not at the display size.** Post content renders at 800px and clicking a figure opens it in the lightbox at up to 96vw, so anything under ~1200px has nothing extra to show and the lightbox looks broken. Use `-colors 220` on photographic figures to keep them under ~300KB.
 
 ## Content rules
 
