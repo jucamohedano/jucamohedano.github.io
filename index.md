@@ -47,6 +47,9 @@ layout: default
     <h2>Projects</h2>
     <ul class="project-list">
         <li>
+            <strong><a href="/blog/2026/07/22/what-multimodal-models-know/">MSc Thesis: What Multimodal Models Know but Don't Say</a></strong> - Built a sampling-based evaluation framework on OVEN that separates coverage from reliability, and showed that a lenient LLM judge inverts the ranking of Qwen3-VL model sizes while a specificity-preserving audit restores it.
+        </li>
+        <li>
             <strong><a href="/blog/2026/06/22/reasoning-shortcuts-raven/">Reasoning Shortcuts in Neuro-Symbolic Models on RAVEN</a></strong> - Extended the rsbench benchmark to Raven's Progressive Matrices: built a reduced RAVEN dataset, a DeepProbLog solver, and showed it reaches high answer accuracy while grounding only one of three concepts - a textbook reasoning shortcut, fixed with 1% concept supervision.
         </li>
         <li>
