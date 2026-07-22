@@ -1,0 +1,148 @@
+% Juan Camacho Mohedano — CV
+% Rebuild of the Word CV in LaTeX, matching its layout:
+%   right-aligned date column | content column, Palatino text, diamond bullets.
+% Build:  pdflatex cv.tex   (twice, for the footer page count)
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext}                 % Palatino-style serif
+\usepackage[margin=17mm,top=13mm,bottom=10mm]{geometry}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{needspace}
+
+\pagestyle{empty}
+\frenchspacing
+\setlength{\parindent}{0pt}
+
+% ── column geometry ───────────────────────────────────────────────────────
+\newlength{\datecol}\setlength{\datecol}{34mm}
+\newlength{\gapcol}\setlength{\gapcol}{6mm}
+\newlength{\bodycol}
+\setlength{\bodycol}{\dimexpr\textwidth-\datecol-\gapcol\relax}
+
+% ── building blocks ───────────────────────────────────────────────────────
+% A section heading, aligned with the content column.
+\newcommand{\cvsection}[1]{%
+  \needspace{4\baselineskip}%
+  \vspace{3.2mm}%
+  \hspace*{\dimexpr\datecol+\gapcol\relax}{\LARGE #1}\par
+  \vspace{1.4mm}}
+
+% A row: right-aligned label on the left, block of content on the right.
+\newcommand{\cventry}[2]{%
+  \needspace{2\baselineskip}%
+  \begin{minipage}[t]{\datecol}\raggedleft\strut #1\end{minipage}%
+  \hspace{\gapcol}%
+  \begin{minipage}[t]{\bodycol}\raggedright\strut #2\end{minipage}\par
+  \vspace{1.1mm}}
+
+% Content with no label in the left column.
+\newcommand{\cvline}[1]{\cventry{}{#1}}
+
+\setlist[itemize]{leftmargin=4.5mm,itemsep=0.4mm,topsep=0.8mm,parsep=0pt,
+                  label=\footnotesize\ding{117}}
+
+\newcommand{\role}[1]{\textit{#1}}
+% Hugging Face mark, sized to sit on the text baseline like the icon glyphs
+\newcommand{\hficon}{\raisebox{-0.4ex}{\includegraphics[height=1.7ex]{hf-logo.png}}}
+
+% ══════════════════════════════════════════════════════════════════════════
+\begin{document}
+
+% ── header ────────────────────────────────────────────────────────────────
+\begin{minipage}[b]{0.56\textwidth}
+  {\fontsize{27}{31}\selectfont Juan Camacho\\ Mohedano}
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.42\textwidth}
+  \raggedleft\small\itshape
+  \faEnvelope[regular]~\href{mailto:jucamohedano@gmail.com}{jucamohedano@gmail.com}\\[0.9mm]
+  \faGithub~\href{https://github.com/jucamohedano}{jucamohedano}\\[0.9mm]
+  \faGlobe~\href{https://jucamohedano.github.io}{jucamohedano.github.io}\\[0.9mm]
+  \hficon~\href{https://huggingface.co/jucamohedano}{huggingface.co/jucamohedano}
+\end{minipage}
+
+\vspace{1mm}
+
+% ── research interests ────────────────────────────────────────────────────
+\cvsection{Research Interests}
+\cvline{VLMs, LLMs, LLM agents --- evaluation, interpretability and post-training}
+
+% ── education ─────────────────────────────────────────────────────────────
+\cvsection{Education}
+
+\cventry{Sep 2023 -- Jul 2026}{%
+  \textbf{University of Trento}, \role{MSc in AI Systems.}\\
+  Thesis: \role{What Do Large Multimodal Models Really Know? Unlocking
+  Knowledge Through Test-Time Computation in Open-World Image Classification.}\\
+  Advisor: \role{Elisa Ricci.}
+  \begin{itemize}
+    \item Built a 256-sample evaluation framework on the OVEN benchmark separating
+          coverage from reliability; showed a lenient LLM judge inverts the ranking
+          of Qwen3-VL 2B--32B, while a specificity-preserving audit restores it.
+    \item Extended the rsbench benchmark suite to Raven's Progressive Matrices with a
+          DeepProbLog solver, exposing a reasoning shortcut: 0.91 answer F1 while two
+          of three concepts stayed at chance, removed with 1\% concept supervision.
+    \item Compared GPT-2 expert neurons against fMRI recordings from nine subjects
+          using representational similarity analysis; expert neurons align with brain
+          activity better than the dense embeddings containing them (mean \textit{d} = 0.63).
+    \item Improved cache-based Test-Time Adaptation with a waiting-list strategy that
+          revisits uncertain samples, targeting non-i.i.d.\ streams.
+  \end{itemize}}
+
+\cventry{2019 -- 2022}{%
+  \textbf{University of Leeds}, \role{BSc Computer Science with AI.}\\
+  \role{First class.} Co-led the robotics team competing at RoboCup.\\
+  Thesis: \role{6DoF Robot Grasping.} Advisors: \role{Matteo Leonetti \& Mehmet Dogar.}}
+
+\cventry{2017 -- 2019}{%
+  \textbf{Marshalltown Community College}, \role{Associate of Arts.}}
+
+% ── work experience ───────────────────────────────────────────────────────
+\cvsection{Work Experience}
+
+\cventry{May 2025 -- Jul 2025}{%
+  \textbf{COVAP}, Pozoblanco, Spain.\\
+  \role{AI Engineer}\\
+  Built a CrewAI agentic workflow that cut budget-document validation from 30 minutes
+  to under 5, and a multimodal chain validating export documentation against
+  product-tag photographs. Shipped two OpenWebUI filters and evaluated GraphRAG,
+  docling, OCRFlux and NuExtract for the document-ingestion pipeline.}
+
+\cventry{Jun 2024 -- Jul 2024}{%
+  \textbf{Freelance}\\
+  \role{AI Engineer}\\
+  Customised the open-source RAGApp to optimise vector-search retrieval with an
+  agentic workflow for contextual matching; authored five educational notebooks on
+  applied AI over image and text.}
+
+\cventry{Jan 2023 -- Jun 2023}{%
+  \textbf{NEURA Robotics}, Bielefeld, Germany.\\
+  \role{Robotics Developer}\\
+  Implemented ROS 2 servers for low-level control automation, explored
+  state-of-the-art grasping techniques, and collected an RGB dataset to train a YOLO
+  model for object detection.}
+
+% ── skills ────────────────────────────────────────────────────────────────
+\cvsection{Skills}
+\cventry{Coding}{Python [PyTorch, Transformers, vLLM, TRL/GRPO], CrewAI,
+                 RAG/GraphRAG, Docker, SLURM}
+\cventry{Languages}{Spanish, English}
+
+% ── competitions & awards ─────────────────────────────────────────────────
+\cvsection{Competitions \& Awards}
+\cventry{2024}{\textbf{NASA International Space Apps}, \role{honorable mention} ---
+               \textbf{Hub Innovazione Trentino Challenge} ---
+               \textbf{AI Scholarship}, COVAP}
+\cventry{2023}{\textbf{FruitPunch AI}, online}
+\cventry{2020 -- 2022}{\textbf{RoboCup} 2021--22 ---
+               \textbf{RoboCup@Home Education}, \role{Gold Award} 2020 --- \textbf{SciRoc} 2021}
+
+\end{document}

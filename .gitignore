@@ -36,3 +36,9 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 vendor/ 
+# CV build artifacts / editable source (PDF is published from assets/files)
+docs/cv/*.pdf
+docs/cv/*.aux
+docs/cv/*.log
+docs/cv/*.out
+assets/files/*.docx
