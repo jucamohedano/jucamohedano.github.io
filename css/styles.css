@@ -26,6 +26,12 @@
     --viz-3: #6fa1e0;
     --viz-4: #3878cc;
     --viz-5: #14508f;
+    --card-vlm: #0366d6;
+    --card-robotics: #b45309;
+    --card-interp: #7c3aed;
+    --card-nesy: #15803d;
+    --card-applied: #db2777;
+    --card-tint: 8%;
 }
 
 /* Dark Theme */
@@ -55,6 +61,12 @@
     --viz-3: #2f72b4;
     --viz-4: #559fe6;
     --viz-5: #93c8ff;
+    --card-vlm: #4a90d9;
+    --card-robotics: #b87d1f;
+    --card-interp: #9578e0;
+    --card-nesy: #2da85f;
+    --card-applied: #d4609b;
+    --card-tint: 14%;
 }
 
 /* No-JS fallback: follow the OS theme when JS never set data-theme */
@@ -85,6 +97,12 @@
         --viz-3: #2f72b4;
         --viz-4: #559fe6;
         --viz-5: #93c8ff;
+        --card-vlm: #4a90d9;
+        --card-robotics: #b87d1f;
+        --card-interp: #9578e0;
+        --card-nesy: #2da85f;
+        --card-applied: #d4609b;
+        --card-tint: 14%;
     }
 
     html:not([data-theme]) .post-meta,
@@ -382,19 +400,30 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .project-card {
+    --hue: var(--card-vlm);
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border-color);
+    border-top: 3px solid var(--hue);
     border-radius: 12px;
-    padding: 1.15rem 1.25rem 1.1rem;
-    background-color: var(--viz-panel);
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    padding: 1.05rem 1.25rem 1.1rem;
+    background-color: color-mix(in srgb, var(--hue) var(--card-tint), var(--viz-panel));
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-    border-color: var(--accent);
+    border-color: var(--hue);
+    border-top-color: var(--hue);
     transform: translateY(-2px);
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--hue) 22%, transparent);
 }
+
+/* Domain hues — colour follows the kind of work, not the card's position */
+.d-vlm      { --hue: var(--card-vlm); }
+.d-robotics { --hue: var(--card-robotics); }
+.d-interp   { --hue: var(--card-interp); }
+.d-nesy     { --hue: var(--card-nesy); }
+.d-applied  { --hue: var(--card-applied); }
 
 .pc-top {
     display: flex;
@@ -409,7 +438,7 @@ html:not([data-theme]) .theme-toggle {
 
 .pc-kind {
     font-weight: 700;
-    color: var(--accent);
+    color: var(--hue);
 }
 
 .pc-title {
@@ -424,7 +453,7 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .pc-title a:hover {
-    color: var(--accent);
+    color: var(--hue);
     text-decoration: none;
 }
 
@@ -448,8 +477,12 @@ html:not([data-theme]) .theme-toggle {
     font-size: 0.75rem;
     padding: 0.15rem 0.55rem;
     border-radius: 999px;
-    background-color: var(--pill-track-bg);
-    color: var(--nav-link-color);
+    background-color: color-mix(in srgb, var(--hue) 16%, transparent);
+    color: var(--heading-color);
+}
+
+.pc-links a {
+    color: var(--hue);
 }
 
 .pc-links {
