@@ -50,6 +50,9 @@ layout: default
             <strong><a href="/blog/2026/06/22/reasoning-shortcuts-raven/">Reasoning Shortcuts in Neuro-Symbolic Models on RAVEN</a></strong> - Extended the rsbench benchmark to Raven's Progressive Matrices: built a reduced RAVEN dataset, a DeepProbLog solver, and showed it reaches high answer accuracy while grounding only one of three concepts - a textbook reasoning shortcut, fixed with 1% concept supervision.
         </li>
         <li>
+            <strong><a href="/blog/2026/02/19/expert-neurons-brain-alignment/">Do a Language Model's Expert Neurons Think Like a Brain?</a></strong> - Extracted sparse concept-specific neurons from GPT-2 and compared their representational geometry against fMRI recordings from 9 people using RSA, showing expert neurons align with brain data better than the dense embeddings they come from.
+        </li>
+        <li>
             <strong><a href="/blog/2024/11/30/alpha-clip-study/">Alpha-CLIP: A Breakthrough in Region-Focused AI Vision</a></strong> - A literature review exploring Alpha-CLIP's capabilities in region-focused AI vision and proposing enhancements for improved performance.
         </li>
         <li>

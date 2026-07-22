@@ -464,6 +464,19 @@ footer {
     opacity: 0.9;
 }
 
+/* Inline SVG diagrams: theme-aware, scale with the column */
+.figure-svg {
+    margin: 1.5rem 0;
+}
+
+.figure-svg svg {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin: 0 auto;
+}
+
 .post-content blockquote {
     margin: 1.5rem 0;
     padding: 0.5rem 1.5rem;
