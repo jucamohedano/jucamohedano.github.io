@@ -87,6 +87,20 @@ layout: default
                 <a href="https://huggingface.co/datasets/jucamohedano/Qwen3-30B-A3B-Instruct-2507_custom_60_cot" target="_blank" rel="noopener">Dataset</a>
             </div>
         </li>
+        <li class="project-card d-applied">
+            <div class="pc-top">
+                <span class="pc-kind">Freelance</span>
+                <span class="pc-year">2025</span>
+            </div>
+            <h3 class="pc-title"><a href="/blog/2025/05/31/benchmarking-log-parsers/">Which Log Parser Should You Actually Use?</a></h3>
+            <p class="pc-desc">Built a benchmark for log analysis: compared 13 open-source log parsers on accuracy, throughput, memory and tuning effort, then expanded an anomaly-detection benchmark from 5 to 49 PyOD algorithms with memory tracking and dimensionality reduction.</p>
+            <ul class="pc-tags">
+                <li>Benchmarking</li><li>Anomaly detection</li><li>PyOD</li><li>Systems</li>
+            </ul>
+            <div class="pc-links">
+                <a href="/blog/2025/05/31/benchmarking-log-parsers/">Write-up</a>
+            </div>
+        </li>
         <li class="project-card d-vlm">
             <div class="pc-top">
                 <span class="pc-kind">Literature review</span>
