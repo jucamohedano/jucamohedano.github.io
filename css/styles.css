@@ -262,40 +262,7 @@ section {
     margin-bottom: 0.15rem;
 }
 
-/* "Currently" callout */
-.now-box {
-    background-color: var(--callout-bg);
-    border: 1px solid var(--callout-border);
-    border-radius: 12px;
-    padding: 1rem 1.25rem;
-    margin: 1.5rem 0;
-}
-
-.now-box p {
-    margin: 0;
-}
-
-.pulse-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--accent);
-    margin-right: 0.5rem;
-    vertical-align: 2px;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.35; }
-}
-
 @media (prefers-reduced-motion: reduce) {
-    .pulse-dot {
-        animation: none;
-    }
-
     .fade-in {
         animation: none;
     }

@@ -22,9 +22,6 @@ layout: default
         in neuro-symbolic models, and on
         <a href="/blog/2024/03/01/test-time-adaptation/">test-time adaptation</a> for image classification.
     </p>
-    <div class="now-box">
-        <p><span class="pulse-dot" aria-hidden="true"></span><strong>Currently:</strong> post-training LLMs with GRPO, exploring a model's data manifold via sampling, and whatever comes next. Always happy to chat, so <a href="mailto:{{ site.email }}">ping me</a> if any of this is your thing.</p>
-    </div>
 </section>
 
 {% comment %}
