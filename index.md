@@ -4,17 +4,17 @@ layout: default
 
 <section class="bio">
     <p>
-        Hi, I'm Juan — an AI engineer drawn to the research side of large language
+        Hi, I'm Juan, an AI engineer drawn to the research side of large language
         and multimodal models: how we measure what they actually know, what's
         encoded inside them, and how post-training changes it.
     </p>
     <p>
         I just finished an MSc in AI Systems at the University of Trento. I like the
-        engineering as much as the questions — a good part of the fun is making the
-        GPUs go brrr. Before that: AI systems at COVAP, robotics at NEURA Robotics.
+        engineering as much as the questions, and a good part of the fun is making
+        the GPUs go brrr. Before that, AI systems at COVAP and robotics at NEURA Robotics.
     </p>
     <div class="now-box">
-        <p><span class="pulse-dot" aria-hidden="true"></span><strong>Currently:</strong> post-training LLMs with GRPO, exploring a model's data manifold via sampling, and whatever comes next. Always happy to chat — <a href="mailto:{{ site.email }}">ping me</a>.</p>
+        <p><span class="pulse-dot" aria-hidden="true"></span><strong>Currently:</strong> post-training LLMs with GRPO, exploring a model's data manifold via sampling, and whatever comes next. Always happy to chat, so <a href="mailto:{{ site.email }}">ping me</a> if any of this is your thing.</p>
     </div>
 </section>
 
@@ -47,7 +47,7 @@ layout: default
                 <span class="pc-year">2026</span>
             </div>
             <h3 class="pc-title"><a href="/blog/2026/07/22/what-multimodal-models-know/">What Multimodal Models Know but Don't Say</a></h3>
-            <p class="pc-desc">A sampling-based evaluation framework on OVEN that separates what a model knows from what it reliably says — and shows a lenient LLM judge inverting the ranking of Qwen3-VL sizes that a specificity audit restores.</p>
+            <p class="pc-desc">A sampling-based evaluation framework on OVEN that separates what a model knows from what it reliably says, and shows a lenient LLM judge inverting the ranking of Qwen3-VL sizes that a specificity audit restores.</p>
             <ul class="pc-tags">
                 <li>Multimodal</li><li>Evaluation</li><li>LLM-as-judge</li><li>GRPO</li>
             </ul>

@@ -14,13 +14,13 @@ Research problems come with a benchmark. Business problems come with a person wh
 
 *Internship at COVAP, May to July 2025.*
 
-COVAP — *Cooperativa Ganadera del Valle de los Pedroches* — is a livestock cooperative founded in 1959 and owned by its member farmers, who raise dairy cattle, sheep, beef and acorn-fed 100% Ibérico pigs across the dehesa of northern Córdoba. It runs the chain from animal feed through to dairy, cheese and meat production, and exports to around thirty countries. That last detail matters for the second project below.
+COVAP (*Cooperativa Ganadera del Valle de los Pedroches*) is a livestock cooperative founded in 1959 and owned by its member farmers, who raise dairy cattle, sheep, beef and acorn-fed 100% Ibérico pigs across the dehesa of northern Córdoba. It runs the chain from animal feed through to dairy, cheese and meat production, and exports to around thirty countries. That last detail matters for the second project below.
 
 ## Two Workflows
 
 **Budget analysis.** The first was an agentic workflow, built with CrewAI and prototyped quickly in Langflow, that extracts and validates data from multi-page budget documents. It was designed to run over hundreds of budgets, replacing a repetitive manual check.
 
-The result that mattered to the department wasn't a metric on a leaderboard: validation time per document went from around thirty minutes to under five, better than an 80% saving, with a human-in-the-loop verification step kept at the end. That last part is the design decision I'd defend hardest — the point was never to remove the person, it was to stop them spending their day on the mechanical part.
+The result that mattered to the department wasn't a metric on a leaderboard: validation time per document went from around thirty minutes to under five, better than an 80% saving, with a human-in-the-loop verification step kept at the end. That last part is the design decision I'd defend hardest: the point was never to remove the person, it was to stop them spending their day on the mechanical part.
 
 **Export validation.** The second workflow addresses a genuinely expensive failure mode for a cooperative shipping meat and dairy to thirty-odd countries: documentation errors that get a shipment rejected at customs. I designed a multi-step validation chain that uses multimodal models to check consistency across the original order, the various shipping PDFs, and photographs of the physical product tags. If those three disagree, you want to know before the goods leave, not after.
 
@@ -35,7 +35,7 @@ Building these meant reading a large unfamiliar codebase without much documentat
 
 ## When Standard RAG Isn't Enough
 
-The existing retrieval setup — standard RAG with an LLM reranker — wasn't reliably surfacing key details from the document stores. Rather than tune prompts around the symptom, I went to the literature on advanced RAG and set up a test environment for **GraphRAG**, specifically [graphiti](https://github.com/getzep/graphiti) from Zep, to evaluate whether a temporal knowledge-graph approach would give more context-aware retrieval. That direction came out of a suggestion from my supervisor, and it reframed the problem from "better ranking" to "better structure".
+The existing retrieval setup, standard RAG with an LLM reranker, wasn't reliably surfacing key details from the document stores. Rather than tune prompts around the symptom, I went to the literature on advanced RAG and set up a test environment for **GraphRAG**, specifically [graphiti](https://github.com/getzep/graphiti) from Zep, to evaluate whether a temporal knowledge-graph approach would give more context-aware retrieval. That direction came out of a suggestion from my supervisor, and it reframed the problem from "better ranking" to "better structure".
 
 The other half was getting clean text out of messy documents in the first place. I evaluated a chain of specialised models:
 
@@ -51,7 +51,7 @@ Three things stuck with me:
 
 **Feedback loops beat clever prompts.** My supervisor acted as the link to the actual end users, and their feedback turned the budget agent from a naive prompt-based first version into something people would use. No amount of prompt engineering substitutes for finding out how the work is really done.
 
-**Evaluating technology is real engineering work.** Testing graphiti, docling, OCRFlux and NuExtract and reporting honestly on which fit production was as valuable as the code I shipped — a negative result on a promising tool saves the next person weeks.
+**Evaluating technology is real engineering work.** Testing graphiti, docling, OCRFlux and NuExtract and reporting honestly on which fit production was as valuable as the code I shipped. A negative result on a promising tool saves the next person weeks.
 
 **Integration is where value gets realised.** The budget workflow only mattered once it was one click away inside the tool people already used. The gap between "it works on my machine" and "it is part of someone's day" is the whole job.
 
