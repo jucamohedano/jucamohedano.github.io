@@ -132,7 +132,7 @@ body {
 }
 
 .container {
-    max-width: 990px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -410,30 +410,20 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .project-card {
-    --hue: var(--card-vlm);
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border-color);
-    border-top: 3px solid var(--hue);
     border-radius: 12px;
     padding: 1.05rem 1.25rem 1.1rem;
-    background-color: color-mix(in srgb, var(--hue) var(--card-tint), var(--viz-panel));
+    background-color: var(--viz-panel);
     transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-    border-color: var(--hue);
-    border-top-color: var(--hue);
+    border-color: var(--nav-link-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 14px color-mix(in srgb, var(--hue) 22%, transparent);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
-
-/* Domain hues — colour follows the kind of work, not the card's position */
-.d-vlm      { --hue: var(--card-vlm); }
-.d-robotics { --hue: var(--card-robotics); }
-.d-interp   { --hue: var(--card-interp); }
-.d-nesy     { --hue: var(--card-nesy); }
-.d-applied  { --hue: var(--card-applied); }
 
 .pc-top {
     display: flex;
@@ -448,7 +438,7 @@ html:not([data-theme]) .theme-toggle {
 
 .pc-kind {
     font-weight: 700;
-    color: var(--hue);
+    color: var(--heading-color);
 }
 
 .pc-title {
@@ -463,7 +453,7 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .pc-title a:hover {
-    color: var(--hue);
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -485,14 +475,15 @@ html:not([data-theme]) .theme-toggle {
 
 .pc-tags li {
     font-size: 0.75rem;
-    padding: 0.15rem 0.55rem;
+    padding: 0.15rem 0.6rem;
     border-radius: 999px;
-    background-color: color-mix(in srgb, var(--hue) 16%, transparent);
-    color: var(--heading-color);
+    background-color: var(--pill-track-bg);
+    border: 1px solid var(--border-color);
+    color: var(--nav-link-color);
 }
 
 .pc-links a {
-    color: var(--hue);
+    color: var(--link-color);
 }
 
 .pc-links {
