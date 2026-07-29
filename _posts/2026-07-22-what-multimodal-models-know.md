@@ -12,7 +12,7 @@ My MSc thesis started as an attempt to make vision-language models more accurate
 
 <!--more-->
 
-*By Juan Camacho Mohedano — MSc in Artificial Intelligence Systems, University of Trento. All figures below are from my thesis and defence presentation unless noted otherwise.*
+*By Juan Camacho Mohedano, MSc in Artificial Intelligence Systems, University of Trento. All figures below are from my thesis and defence presentation unless noted otherwise.*
 
 ## The Problem Nobody Can Score
 
@@ -51,10 +51,10 @@ That taxonomy is what makes the measurement possible. For each image the framewo
 
 The key design decision is the split on the right:
 
-- **Coverage** (pass@256) — does the correct entity appear *anywhere* across the samples?
-- **Reliability** (pass@1) — does the model produce it on the *first* attempt?
+- **Coverage** (pass@256): does the correct entity appear *anywhere* across the samples?
+- **Reliability** (pass@1): does the model produce it on the *first* attempt?
 
-Keeping them apart immediately shows something a single score hides. The 2B model reaches the correct entity for 73% of images but leads with it in only 16%. Conventional single-attempt evaluation would file that away as a 16% model — it knows roughly four and a half times more than it reliably says.
+Keeping them apart immediately shows something a single score hides. The 2B model reaches the correct entity for 73% of images but leads with it in only 16%. Conventional single-attempt evaluation would file that away as a 16% model: it knows roughly four and a half times more than it reliably says.
 
 ## The Result I Didn't Expect
 
@@ -65,7 +65,7 @@ It doesn't. The judge was told to accept answers at the question's level of spec
 ![Slopegraph: under a lenient judge 2B ranks second, under the specificity audit it ranks last](/assets/images/thesis_ranking_flip.png)
 *Same models, same images, same samples. Only the definition of "correct" changes, and 2B falls from second to last. Figure from my defence presentation.*
 
-Under the audit the ordering becomes cleanly monotonic — 0.311, 0.319, 0.334, 0.512 — and bigger is unambiguously better at every sampling budget. The 2B model's apparent breadth was an artifact of a lenient judge, not a fact about its knowledge. The receipts are in the under-specificity rate: **7.9%** of the 2B model's accepted answers name a parent category rather than the target entity, against **1.3%** for the 32B.
+Under the audit the ordering becomes cleanly monotonic (0.311, 0.319, 0.334, 0.512), and bigger is unambiguously better at every sampling budget. The 2B model's apparent breadth was an artifact of a lenient judge, not a fact about its knowledge. The receipts are in the under-specificity rate: **7.9%** of the 2B model's accepted answers name a parent category rather than the target entity, against **1.3%** for the 32B.
 
 The obvious objection is that I simply picked a bad judge. So I re-ran the comparison with different judge models.
 
@@ -78,27 +78,27 @@ This is a **granularity leniency**, and as far as I can tell it is a distinct fa
 
 If the knowledge is in there, can we get it out reliably? Three attempts, three different answers.
 
-**Recombining the model's own samples** helps at small sampling budgets, but only reorganises knowledge the model already has — with the same 16 candidate answers it nearly doubles coverage, yet adds nothing new to the pool.
+**Recombining the model's own samples** helps at small sampling budgets, but only reorganises knowledge the model already has: with the same 16 candidate answers it nearly doubles coverage, yet adds nothing new to the pool.
 
 **A structured prompt that walks the model down the taxonomy** genuinely does raise specificity at test time.
 
 ![The taxonomy traversal prompt and the specificity gains it produces](/assets/images/thesis_traversal.png)
-*Walking the model down the taxonomy — structure, building, place of worship, Notre-Dame de Paris — buys specificity at inference time. Figure from my defence presentation.*
+*Walking the model down the taxonomy (structure, building, place of worship, Notre-Dame de Paris) buys specificity at inference time. Figure from my defence presentation.*
 
 **Training that behaviour in with outcome-only reinforcement learning** (GRPO) sharpens the *format* the prompt already produced without making the answers more accurate. Taxonomy-aware reasoning, in short, can be prompted for but not cheaply trained in.
 
 ## What I'd Take Away
 
-The thread running through all of it is that measurement instruments have opinions. A lenient judge and a strict audit ranked the same four models on the same data in different orders, and neither ranking is wrong — they answer different questions. Open-world systems should be measured with several metrics under several notions of correctness, and **the gap between those measurements is often the most informative quantity you have**. The distance between what a model knows and what it says is exactly where the interesting research problems live.
+The thread running through all of it is that measurement instruments have opinions. A lenient judge and a strict audit ranked the same four models on the same data in different orders, and neither ranking is wrong: they answer different questions. Open-world systems should be measured with several metrics under several notions of correctness, and **the gap between those measurements is often the most informative quantity you have**. The distance between what a model knows and what it says is exactly where the interesting research problems live.
 
-The code for the whole thing — the sampling harness, the judge, the taxonomy mapping and the GRPO training — is at [oven-mllm-eval](https://github.com/jucamohedano/oven-mllm-eval).
+The code for the whole thing (the sampling harness, the judge, the taxonomy mapping and the GRPO training) is at [oven-mllm-eval](https://github.com/jucamohedano/oven-mllm-eval).
 
 ---
 
 ### Sources
 
 - Figures are from my MSc thesis and defence presentation, University of Trento, 2026.
-- **OVEN benchmark** — Hu, Luan, Chen, Khandelwal, Joshi, Lee, Toutanova and Chang, *Open-domain Visual Entity Recognition: Towards Recognizing Millions of Wikipedia Entities*, ICCV 2023.
-- **Entity taxonomy** — [Wikidata](https://www.wikidata.org) P279 subclass relations.
-- **Models evaluated** — the Qwen3-VL family at 2B, 4B, 8B and 32B.
-- **Datasets in the warm-up experiments** — Oxford-IIIT Pets (Parkhi et al., 2012), Flowers102 (Nilsback and Zisserman, 2008), UCF101 (Soomro et al., 2012), DTD (Cimpoi et al., 2014), Caltech101 (Fei-Fei et al., 2007).
+- **OVEN benchmark**: Hu, Luan, Chen, Khandelwal, Joshi, Lee, Toutanova and Chang, *Open-domain Visual Entity Recognition: Towards Recognizing Millions of Wikipedia Entities*, ICCV 2023.
+- **Entity taxonomy**: [Wikidata](https://www.wikidata.org) P279 subclass relations.
+- **Models evaluated**: the Qwen3-VL family at 2B, 4B, 8B and 32B.
+- **Datasets in the warm-up experiments**: Oxford-IIIT Pets (Parkhi et al., 2012), Flowers102 (Nilsback and Zisserman, 2008), UCF101 (Soomro et al., 2012), DTD (Cimpoi et al., 2014), Caltech101 (Fei-Fei et al., 2007).

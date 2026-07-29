@@ -29,7 +29,7 @@ Previous attempts to solve this problem have relied on either manipulating featu
 
 Alpha-CLIP takes a different approach by integrating an additional "alpha channel" into the standard CLIP architecture. This alpha channel functions like a spotlight, directing the model's attention to specific regions of interest.
 
-In a standard digital image, we have red, green, and blue (RGB) channels that define colors. Alpha-CLIP adds a fourth channel—the alpha channel—creating an RGBA image where "A" highlights regions that deserve special attention.
+In a standard digital image, we have red, green, and blue (RGB) channels that define colors. Alpha-CLIP adds a fourth channel (the alpha channel), creating an RGBA image where "A" highlights regions that deserve special attention.
 
 ![Alpha-CLIP teaser figure](/assets/images/alpha_clip_teaser.png)
 *Alpha-CLIP in a nutshell: the alpha channel spotlights a region of interest across recognition, captioning, and generation tasks. Figure from the Alpha-CLIP project page.*
@@ -88,7 +88,7 @@ While Alpha-CLIP excels at focusing on specific regions, it doesn't naturally mo
 - Allow sparse communication between these regions
 - Improve understanding of spatial and functional relationships
 
-This approach would help Alpha-CLIP better comprehend concepts like "to the left of," "interacting with," or "chasing"—relationships that current region-focused models struggle to capture.
+This approach would help Alpha-CLIP better comprehend concepts like "to the left of," "interacting with," or "chasing", relationships that current region-focused models struggle to capture.
 
 ## The Future of Region-Focused AI Vision
 
