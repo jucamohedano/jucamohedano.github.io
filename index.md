@@ -4,14 +4,15 @@ layout: default
 
 <section class="bio">
     <p>
-        Hi, I'm Juan, an AI engineer drawn to the research side of large language
-        and multimodal models: how we measure what they actually know, what's
-        encoded inside them, and how post-training changes it.
+        Hi, I'm Juan. I'm an AI engineer, and I recently graduated from the
+        University of Trento with an MSc in AI Systems.
     </p>
     <p>
-        I just finished an MSc in AI Systems at the University of Trento. I like the
-        engineering as much as the questions, and a good part of the fun is making
-        the GPUs go brrr. Before that, AI systems at COVAP and robotics at NEURA Robotics.
+        During my degree I worked on a handful of research projects on large
+        language and multimodal models: measuring what they know, understanding
+        what's encoded in them, and experimenting with post-training. Nothing
+        published yet, just real hands-on experimentation. Before that I did
+        applied AI at COVAP and robotics at NEURA Robotics.
     </p>
     <div class="now-box">
         <p><span class="pulse-dot" aria-hidden="true"></span><strong>Currently:</strong> post-training LLMs with GRPO, exploring a model's data manifold via sampling, and whatever comes next. Always happy to chat, so <a href="mailto:{{ site.email }}">ping me</a> if any of this is your thing.</p>
