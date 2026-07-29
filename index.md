@@ -4,15 +4,23 @@ layout: default
 
 <section class="bio">
     <p>
-        Hi, I'm Juan. I'm an AI engineer, and I recently graduated from the
-        University of Trento with an MSc in AI Systems.
+        Hi, I'm Juan. I recently graduated from the University of Trento with an
+        MSc in AI Systems, and I'm looking for new adventures in AI. I'm interested in:
     </p>
+    <ul class="interests">
+        <li>LLM agents</li>
+        <li>multimodal models</li>
+        <li>post-training</li>
+    </ul>
     <p>
-        During my degree I worked on a handful of research projects on large
-        language and multimodal models: measuring what they know, understanding
-        what's encoded in them, and experimenting with post-training. Nothing
-        published yet, just real hands-on experimentation. Before that I did
-        applied AI at COVAP and robotics at NEURA Robotics.
+        During my degree I worked on a few research projects. In particular, my
+        <a href="/blog/2026/07/22/what-multimodal-models-know/">thesis</a> on MLLMs
+        focused on measuring what they know, understanding what's encoded in them,
+        and experimenting a bit with post-training. I also worked on
+        <a href="/blog/2026/02/19/expert-neurons-brain-alignment/">interpretability and brain alignment</a>,
+        on <a href="/blog/2026/06/22/reasoning-shortcuts-raven/">reasoning shortcuts</a>
+        in neuro-symbolic models, and on
+        <a href="/blog/2024/03/01/test-time-adaptation/">test-time adaptation</a> for image classification.
     </p>
     <div class="now-box">
         <p><span class="pulse-dot" aria-hidden="true"></span><strong>Currently:</strong> post-training LLMs with GRPO, exploring a model's data manifold via sampling, and whatever comes next. Always happy to chat, so <a href="mailto:{{ site.email }}">ping me</a> if any of this is your thing.</p>
