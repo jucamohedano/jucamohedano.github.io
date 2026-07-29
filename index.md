@@ -60,6 +60,7 @@ layout: default
             <div class="pc-links">
                 <a href="/blog/2026/07/22/what-multimodal-models-know/">Write-up</a>
                 <a href="https://github.com/jucamohedano/oven-mllm-eval" target="_blank" rel="noopener">Code</a>
+                <a href="/assets/files/TTW_research_project.pdf" target="_blank" rel="noopener">TTW report (PDF)</a>
             </div>
         </li>
         <li class="project-card d-nesy">
@@ -75,6 +76,7 @@ layout: default
             <div class="pc-links">
                 <a href="/blog/2026/06/22/reasoning-shortcuts-raven/">Write-up</a>
                 <a href="https://github.com/jucamohedano/rsbench-code/tree/raven" target="_blank" rel="noopener">Code</a>
+                <a href="/assets/files/NeSy_RAVEN_RS_BENCH.pdf" target="_blank" rel="noopener">Report (PDF)</a>
             </div>
         </li>
         <li class="project-card d-interp">
