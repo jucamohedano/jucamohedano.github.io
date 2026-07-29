@@ -404,8 +404,8 @@ html:not([data-theme]) .theme-toggle {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1.1rem;
 }
 
