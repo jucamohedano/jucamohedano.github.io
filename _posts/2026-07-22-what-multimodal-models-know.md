@@ -25,7 +25,7 @@ This is not a corner case, it's the central difficulty. When a model answers "do
 
 ## The Detour That Became the Thesis
 
-I began with a method, not a measurement problem. **Test-Time Warm-Up** adapts the model to each individual image, label-free, before it answers. And it worked: it lifted zero-shot performance on fine-grained datasets, with the largest breadth gain on Oxford Pets.
+I began with a method, not a measurement problem. **Test-Time Warm-Up** ([full report, PDF](/assets/files/TTW_research_project.pdf)) adapts the model to each individual image, label-free, before it answers. And it worked: it lifted zero-shot performance on fine-grained datasets, with the largest breadth gain on Oxford Pets.
 
 ![Test-Time Warm-Up gains across five datasets: breadth improves while specificity stays flat or falls](/assets/images/thesis_ttw_results.png)
 *Warm-up raises breadth (blue) while specificity (red) stays flat or falls. Datasets: Oxford Pets, Flowers102, UCF101, DTD, Caltech101. Figure from my defence presentation.*

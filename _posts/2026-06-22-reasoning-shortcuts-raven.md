@@ -70,4 +70,4 @@ We repeated the study with four values per attribute. Learning gets much harder:
 - The shortcut is invisible to task metrics and per-attribute collapse alone; you need per-attribute concept F1 and pairwise/joint collapse to see it.
 - A tiny amount of targeted concept supervision (1% of samples, on the attributes the model ignores) removes it entirely.
 
-The code lives in my [rsbench fork (raven branch)](https://github.com/jucamohedano/rsbench-code/tree/raven), with experiment logs on Weights & Biases for both [RAVEN-3x3x3](https://wandb.ai/jucamohedano/raven-3x3x3) and [RAVEN-4x4x4](https://wandb.ai/jucamohedano/raven-4x4x4).
+The full write-up is available as a [PDF report](/assets/files/NeSy_RAVEN_RS_BENCH.pdf). The code lives in my [rsbench fork (raven branch)](https://github.com/jucamohedano/rsbench-code/tree/raven), with experiment logs on Weights & Biases for both [RAVEN-3x3x3](https://wandb.ai/jucamohedano/raven-3x3x3) and [RAVEN-4x4x4](https://wandb.ai/jucamohedano/raven-4x4x4).
