@@ -5,16 +5,22 @@ layout: default
 <section class="bio">
     <p>
         Hi, I'm Juan. I recently graduated from the University of Trento with an
-        MSc in AI Systems, and I'm looking for new adventures in AI. I'm interested
-        in LLM agents, multimodal models, and post-training.
+        MSc in AI Systems, and I'm looking for new adventures in AI.
     </p>
     <p>
-        During my degree I worked on a few research projects — measuring what
+        I've explored different areas in my masters, and that led me to my
+        current interests in AI:
+    </p>
+    <ul class="interests">
+        <li>Post-training and evaluations of LLM agents, which is what I'm targeting right now</li>
+        <li>Computer vision and multimodal models</li>
+        <li>Robotics</li>
+    </ul>
+    <p>
+        During my degree I worked on a few research projects: measuring what
         multimodal models know for my <a href="/blog/2026/07/22/what-multimodal-models-know/">thesis</a>,
         interpretability and brain alignment, reasoning shortcuts in neuro-symbolic
-        models, and test-time adaptation. A few of my favourites are listed below;
-        the full set, with tags and extra links, is on the
-        <a href="/projects/">projects page</a>.
+        models, and test-time adaptation.
     </p>
 </section>
 
