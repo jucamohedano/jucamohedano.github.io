@@ -19,8 +19,9 @@ layout: default
     <p>
         During my degree I worked on a few research projects: measuring what
         multimodal models know for my <a href="/blog/2026/07/22/what-multimodal-models-know/">thesis</a>,
-        interpretability and brain alignment, reasoning shortcuts in neuro-symbolic
-        models, and test-time adaptation.
+        <a href="/blog/2026/02/19/expert-neurons-brain-alignment/">interpretability and brain alignment</a>,
+        <a href="/blog/2026/06/22/reasoning-shortcuts-raven/">reasoning shortcuts</a> in neuro-symbolic
+        models, and <a href="/blog/2024/03/01/test-time-adaptation/">test-time adaptation</a>.
     </p>
 </section>
 
