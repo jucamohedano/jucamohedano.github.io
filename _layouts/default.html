@@ -16,33 +16,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     {% feed_meta %}
     {% seo %}
 </head>
 <body>
     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme"><i class="fas fa-moon"></i></button>
 
-    <div class="container">
-        <header>
-            <a class="header-photo" href="{{ "/" | relative_url }}"><img src="{{ "/assets/images/profile_pic.png" | relative_url }}" alt="{{ site.title }}"></a>
-            <h1 class="site-title">{{ site.title }}</h1>
-            <nav class="pill-nav">
-                <a class="pill{% if page.url == "/" %} active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
-                <a class="pill{% if page.url == "/projects/" %} active{% endif %}" href="{{ "/projects/" | relative_url }}">Projects</a>
-                <a class="pill" href="{{ "/assets/files/Juan_Camacho_CV.pdf" | relative_url }}" target="_blank">CV <i class="fas fa-file-pdf"></i></a>
-                <a class="pill" href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
+    <header class="site-header">
+        <div class="container">
+            {% assign first_name = site.title | split: " " | first %}
+            <a class="site-title" href="{{ "/" | relative_url }}"><span class="site-title-first">{{ first_name }}</span>{{ site.title | remove_first: first_name }}</a>
+            <nav class="site-nav">
+                <a class="nav-link{% if page.url == "/" %} active{% endif %}" href="{{ "/" | relative_url }}">home</a>
+                <a class="nav-link{% if page.url == "/projects/" %} active{% endif %}" href="{{ "/projects/" | relative_url }}">projects</a>
+                <a class="nav-link" href="{{ "/assets/files/Juan_Camacho_CV.pdf" | relative_url }}" target="_blank">cv</a>
+                <a class="nav-link" href="https://github.com/{{ site.github_username }}" target="_blank">github</a>
             </nav>
-        </header>
+        </div>
+    </header>
 
+    <div class="container">
         <main class="fade-in">
             {{ content }}
         </main>
-
-        <footer>
-            <p>&copy; {% assign date_format = site.minima.date_format | default: "%Y" %}{{ site.time | date: date_format }} {{ site.title }}. All rights reserved.</p>
-        </footer>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {% assign date_format = site.minima.date_format | default: "%Y" %}{{ site.time | date: date_format }} {{ site.title }}. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="{{ "/js/script.js" | relative_url }}"></script>
 </body>
