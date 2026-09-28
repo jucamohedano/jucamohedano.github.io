@@ -246,11 +246,12 @@ section {
     margin: 0 0 1rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .page-title {
     margin: 0 0 0.5rem;
+    font-size: 3rem;
 }
 
 .page-description {
@@ -352,7 +353,7 @@ html:not([data-theme]) .theme-toggle {
 
 .post-meta {
     color: var(--text-muted);
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     margin-bottom: 0.6rem;
 }
 
@@ -390,7 +391,7 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .hl-title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.35;
     margin: 0;
@@ -407,14 +408,14 @@ html:not([data-theme]) .theme-toggle {
 
 .hl-meta {
     flex-shrink: 0;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
     white-space: nowrap;
 }
 
 .hl-desc {
     margin: 0.25rem 0 0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.55;
     color: var(--text-muted);
 }
@@ -434,19 +435,32 @@ footer p {
 
 /* Social Links */
 .social-links {
-    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
 .social-links a {
-    margin-right: 1rem;
+    color: var(--text-muted);
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.social-links i {
+    margin: 0;
 }
 
 /* Hugging Face mark, matched to the Font Awesome glyphs beside it */
 .hf-icon {
+    width: 1em;
     height: 1em;
-    width: auto;
-    vertical-align: -0.15em;
-    margin-right: 0.3rem;
+    vertical-align: -0.125em;
 }
 
 /* Icons */
@@ -475,8 +489,9 @@ footer p {
         font-size: 2rem;
     }
 
-    .section-title {
-        font-size: 1.75rem;
+    .section-title,
+    .page-title {
+        font-size: 2.5rem;
     }
 
     .hl-top {
