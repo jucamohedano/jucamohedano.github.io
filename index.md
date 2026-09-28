@@ -64,13 +64,7 @@ layout: default
             </div>
             <p class="hl-desc">13 open-source log parsers compared on accuracy, throughput, memory and tuning effort.</p>
         </li>
-        <li>
-            <div class="hl-top">
-                <h3 class="hl-title"><a href="/blog/2024/11/30/alpha-clip-study/">Alpha-CLIP: Region-Focused Vision</a></h3>
-                <span class="hl-meta">Literature review · 2024</span>
-            </div>
-            <p class="hl-desc">How an alpha channel lets CLIP attend to a chosen region without losing the surrounding context.</p>
-        </li>
+        <!-- Alpha-CLIP is unpublished (published: false) and intentionally omitted here. -->
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2024/03/01/test-time-adaptation/">Test-Time Adaptation for VLMs</a></h3>

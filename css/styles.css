@@ -202,9 +202,8 @@ pre code {
 
 .site-title {
     color: var(--heading-color);
-    font-size: 1.25rem;
+    font-size: 3rem;
     font-weight: 300;
-    white-space: nowrap;
 }
 
 .site-title:hover {
@@ -270,6 +269,7 @@ section {
     width: 30%;
     height: auto;
     margin: 0.4rem 0 1rem 2rem;
+    border-radius: 50%;
 }
 
 .bio ul.interests {
@@ -487,6 +487,10 @@ footer p {
 @media (max-width: 600px) {
     h1 {
         font-size: 2rem;
+    }
+
+    .site-title {
+        font-size: 1.75rem;
     }
 
     .section-title,
