@@ -3,6 +3,7 @@ layout: default
 ---
 
 <section class="bio">
+    <img class="profile-photo" src="{{ "/assets/images/profile_pic.png" | relative_url }}" alt="{{ site.title }}" width="460" height="460">
     <p>
         Hi, I'm Juan. I recently graduated from the University of Trento with an
         MSc in AI Systems, and I'm looking for new adventures in AI.
@@ -26,6 +27,7 @@ layout: default
 </section>
 
 <section id="projects">
+    <h2 class="section-title">projects</h2>
     <ul class="home-list">
         <li>
             <div class="hl-top">
@@ -94,6 +96,7 @@ layout: default
 </section>
 
 <section id="contact">
+    <h2 class="section-title">contact</h2>
     <p>
         Find me on <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>,
         <a href="https://huggingface.co/jucamohedano" target="_blank" rel="noopener">Hugging Face</a> or

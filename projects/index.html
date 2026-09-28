@@ -3,23 +3,17 @@ layout: default
 title: Projects
 ---
 
-<h1>Projects</h1>
+<h1 class="page-title">projects</h1>
 
-<p>Write-ups of things I've built and worked on — research projects, thesis work, and internships.</p>
+<p class="page-description">Write-ups of things I've built and worked on — research projects, thesis work, and internships.</p>
 
 <ul class="post-list">
   {% for post in site.posts %}
     <li class="post-item">
-      {% if post.image %}
-      <a class="post-thumb" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy"></a>
-      {% endif %}
-      <div class="post-item-body">
-        <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
-        <div class="post-excerpt">
-          {{ post.excerpt }}
-        </div>
-        <a href="{{ post.url | relative_url }}">Read more →</a>
+      <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <div class="post-excerpt">
+        {{ post.excerpt }}
       </div>
     </li>
   {% endfor %}
