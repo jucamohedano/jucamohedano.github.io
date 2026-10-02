@@ -7,6 +7,7 @@ excerpt_separator: <!--more-->
 categories: [machine-learning, research, projects]
 tags: [test-time-adaptation, vision-language-models, CLIP, distribution-shift, cache-based-adaptation]
 image: /assets/images/tda_waiting_list.png
+published: false
 ---
 
 Hello fellow ML enthusiasts! I'm excited to share our journey exploring the fascinating world of Test-Time Adaptation (TTA) that I embarked on with my amazing teammates Samuele Bolotta and Andrea De Carlo during our master's program. Get ready for some real talk about making stubborn ML models more flexible in the wild!
