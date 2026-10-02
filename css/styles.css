@@ -512,10 +512,6 @@ footer p {
 }
 
 /* Blog Post Styles */
-.post {
-    max-width: 700px;
-}
-
 .post-header {
     margin-bottom: 2.5rem;
 }
@@ -531,7 +527,7 @@ footer p {
 
 .post-content {
     margin-bottom: 2rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
 
 .post-content h2 {
@@ -544,7 +540,7 @@ footer p {
 
 .post-content h3 {
     margin-top: 1.75rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .post-content strong {
@@ -578,12 +574,6 @@ footer p {
 
 .figure-svg.wide svg {
     max-width: 100%;
-}
-
-@media (min-width: 940px) {
-    .figure-svg.wide {
-        margin-right: -160px;
-    }
 }
 
 .post-content p code,
