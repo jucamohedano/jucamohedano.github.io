@@ -98,8 +98,8 @@ body {
     margin: 0;
     padding: 0;
     transition: color 0.3s ease, background-color 0.3s ease;
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 19px;
+    font-weight: 300;
 }
 
 .container {
@@ -127,6 +127,11 @@ h2 {
 
 h3 {
     font-size: 1.25rem;
+}
+
+strong,
+b {
+    font-weight: 700;
 }
 
 p, ul, ol {
@@ -262,7 +267,7 @@ section {
 .bio {
     display: flow-root;
     margin-bottom: 2.5rem;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
 }
 
 .profile-photo {
@@ -416,7 +421,7 @@ html:not([data-theme]) .theme-toggle {
 
 .hl-desc {
     margin: 0.25rem 0 0;
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.55;
     color: var(--text-muted);
 }
