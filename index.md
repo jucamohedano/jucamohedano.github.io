@@ -4,25 +4,30 @@ layout: default
 
 <section class="bio">
     <img class="profile-photo" src="{{ "/assets/images/profile_pic.png" | relative_url }}" alt="{{ site.title }}" width="460" height="460">
+    <h1 class="home-greeting">Hi! I'm Juan</h1>
     <p>
-        Hi, I'm Juan. I recently completed an MSc in AI Systems at the
-        University of Trento. My work so far has moved between machine-learning
-        research, applied AI engineering, and robotics.
-    </p>
-    <p>
-        During my master's, I explored several areas of AI, including:
+        This year I finished my master's degree in AI Systems at the University
+        of Trento, Italy. During my time there I worked on a few research
+        projects on multimodal models, neuro-symbolic models and alignment
+        between a language model and the human brain. This experience and all
+        the new published research that we see around language models make me
+        very excited to continue working in research. From the projects,
+        especially, from my thesis, I developed new interests that I want to
+        explore:
     </p>
     <ul class="interests">
-        <li>Evaluation and post-training for language and multimodal models</li>
-        <li>Interpretability and model-brain alignment</li>
-        <li>Neuro-symbolic reasoning and robotics</li>
+        <li>post-training and evaluation of language models</li>
+        <li>test-time adaptation</li>
+        <li>Coding LLM agents</li>
     </ul>
     <p>
-        During my degree I worked on measuring what multimodal models know for
-        my <a href="/blog/2026/07/22/what-multimodal-models-know/">thesis</a>,
-        <a href="/blog/2026/02/19/expert-neurons-brain-alignment/">interpretability and brain alignment</a>,
-        and <a href="/blog/2026/06/22/reasoning-shortcuts-raven/">reasoning shortcuts</a> in
-        neuro-symbolic models.
+        At the moment I'm working on post-training a Recursive Language Model,
+        introduced by <a href="https://alexzhang13.github.io/">Alex Zhang</a>,
+        and learning about GPU kernels to optimize inference of models.
+    </p>
+    <p>
+        I would be very happy to discuss any of these topics if you are
+        interested. Feel free to reach out to me via email or X/twitter.
     </p>
 </section>
 
