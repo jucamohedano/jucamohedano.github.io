@@ -10,6 +10,8 @@ image: /assets/images/raven_3x3x3_example.png
 
 Can a model get the right answer for the wrong reasons? For my Advanced ML project at Trento I extended the rsbench benchmark suite to Raven's Progressive Matrices, built a neuro-symbolic solver with DeepProbLog, and caught it red-handed: up to 0.91 answer F1 while two of its three concepts were pure noise.
 
+This project builds on the official [rsbench benchmark suite](https://unitn-sml.github.io/rsbench/) for studying concept quality and reasoning shortcuts. I worked on it under the supervision of Samuele Bortolotti, and contributed the RAVEN implementation in [PR #3](https://github.com/unitn-sml/rsbench-code/pull/3).
+
 <!--more-->
 
 *By Juan Camacho*
