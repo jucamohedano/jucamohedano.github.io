@@ -38,7 +38,7 @@ layout: default
         </li>
         <li>
             <div class="hl-top">
-                <h3 class="hl-title"><a href="/blog/2026/06/22/reasoning-shortcuts-raven/">Reasoning Shortcuts on RAVEN</a></h3>
+                <h3 class="hl-title"><a href="/blog/2026/06/22/reasoning-shortcuts-raven/">Discovering Reasoning Shortcuts in RAVEN</a></h3>
                 <span class="hl-meta">Advanced ML · 2026</span>
             </div>
             <p class="hl-desc">A DeepProbLog solver scores 0.91 answer F1 on Raven's Progressive Matrices while two of its three concepts stay at chance.</p>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Right Answer, Wrong Reasons: Hunting Reasoning Shortcuts on RAVEN"
+title: "Discovering Reasoning Shortcuts in RAVEN"
 date: 2026-06-22
 excerpt_separator: <!--more-->
 categories: [machine-learning, research, projects]
