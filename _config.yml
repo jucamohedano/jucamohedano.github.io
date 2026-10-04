@@ -1,7 +1,7 @@
 # Site settings
 title: Juan Camacho Mohedano
 email: jucamohedano@gmail.com
-description: Personal website of Juan Camacho Mohedano, AI Researcher and Robotics Enthusiast
+description: Personal website of Juan Camacho Mohedano, an AI engineer and recent MSc graduate whose work spans machine learning, applied AI, and robotics.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jucamohedano.github.io" # the base hostname & protocol for your site
 github_username: jucamohedano
@@ -31,4 +31,4 @@ exclude:
   - backups
   - docs
   - AGENTS.md
-  - CLAUDE.md 
+  - CLAUDE.md

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Behind the Scenes at NEURA Robotics: My R&D Internship Journey"
+title: "Building Software for the MiPA Robot at NEURA Robotics"
 date: 2023-06-30
 reading_time: 7
 excerpt_separator: <!--more-->
@@ -9,82 +9,55 @@ tags: [robotics, ROS2, simulation, gazebo, MiPA, internship, deep-learning]
 image: /assets/images/mipa.jpeg
 ---
 
-Ever wondered what it's like to work at a cutting-edge robotics company? For six months, I had the incredible opportunity to join NEURA Robotics' R&D team as a Robotics Developer intern, working on their advanced MiPA robot platform!
+From January to June 2023, I worked as a Robotics Developer in the R&D team at NEURA Robotics. I spent six months working with MiPA, a robot platform designed for everyday interaction, and moved between simulation, grasping, perception, and the software needed to operate the robot safely.
 
 <!--more-->
 
-## Joining the Robot Revolution
-
-From January to June, I dove headfirst into the world of professional robotics development at NEURA Robotics, a company pushing the boundaries of cognitive robotics. As part of the R&D team, I got to work with their impressive MiPA robot - a versatile robot assistant designed for industrial and collaborative applications.
+*My internship at NEURA Robotics, Bielefeld, Germany.*
 
 ![NEURA Robotics MiPA Robot](/assets/images/mipa.jpeg){:style="width: 50%;"}
 *The MiPA robot that I worked with during my internship.*
 
-## My Projects and Responsibilities
+## Adding an arm to the simulation
 
-### Simulation Environment Improvements
+One of my first tasks was to update MiPA's robot description in XML. The goal was to add a robot arm to the torso so that the simulated robot matched the hardware we were working with.
 
-One of my first major projects involved modularizing the robot description and integrating it with the Gazebo simulator. This might sound technical (because it is!), but in simple terms, I was making it easier to:
+This was more than just adding another component to a file. The geometry had to be accurate enough for the simulator to compute collisions correctly, especially while we were developing an autonomous robot task. I had to speak with the engineers working on the physical robot and use their input to make sure the simulation represented the real platform properly.
 
-- Configure different robot setups in simulation
-- Test new features without risking the physical hardware
-- Enable other developers to work with consistent simulation environments
+That was one of my first lessons from working on a real robot: the boundary between software and hardware is not as clean as it looks from the outside. A detail in an XML file can affect whether a planned motion is safe, whether a collision is detected, and whether an autonomous task can run at all.
 
-The challenge? Robot descriptions can get incredibly complex, with hundreds of parameters defining everything from joint limits to sensor positions. By breaking this down into modular components, we made the system much more maintainable and flexible.
+## Keeping the simulated robot still
 
-### Fighting the Forces of Physics (Simulation)
+I also ran into a simulator issue that made the robot's base slowly drift even when it was supposed to remain stationary. I do not remember the exact underlying cause now, so I do not want to pretend that I can explain it precisely. The important part was the behaviour: the longer the simulation ran, the further the base moved from where it should have been.
 
-If you've ever worked with robot simulators, you know they can be... quirky. One particularly annoying issue we faced was simulation noise causing the robot's base to slowly drift over time, even when it should remain stationary.
+I wrote a custom Gazebo plugin to correct that drift and keep the simulated base stable. It was a practical fix to an irritating problem, but it also showed me how different robotics software can be from ordinary application code. Sometimes the hard part is not implementing a new capability. It is making the virtual version of the robot behave consistently enough that the rest of the system can be tested.
 
-I developed a custom Gazebo plugin to counteract this drift, ensuring stable and reliable simulations for long-running tests. It's like creating digital anchor points that keep the virtual robot grounded where it should be, while still allowing for realistic physical interactions.
+## Trying different grasping methods
 
-### Exploring the Cutting Edge of Robot Grasping
+The internship also gave me a chance to continue working on robot grasping after my BSc thesis. I tried the grasping system I had developed during that project, including its analytical solution based on vector computations rather than a learned model. I also experimented with a diffusion-based grasp-generation method from another paper.
 
-Building on my previous experience with 6DoF grasping from my BSc thesis, I conducted an extensive literature review on the latest robot grasping techniques and tested various learning-based approaches with the MiPA platform.
+I did not arrive at one definitive grasping solution during the internship. The useful part was getting to test different ideas against a real robot platform and its constraints. A method that looks promising in a paper still has to fit the robot's sensors, geometry, control stack, and environment before it becomes useful.
 
-This involved experimenting with:
-- Deep reinforcement learning for adaptive grasping
-- Vision-based grasp point detection systems
-- Novel tactile feedback mechanisms
+## Making the robot safer to operate
 
-The goal was to improve the robot's ability to manipulate diverse objects in unstructured environments - a critical capability for next-generation robots that need to work in human spaces.
+Another part of my work was writing ROS 2 servers that acted as safety layers for the robot. They coordinated how the different services were turned on and off, so that the supporting servers were handled in the right order before the main system was shut down.
 
-### Building a Robust Control Infrastructure
+This kind of work is easy to overlook because it does not produce a flashy demo. But a robot needs more than perception and control algorithms. It also needs reliable procedures for starting, stopping, and recovering from problems without leaving other parts of the system in an unsafe state.
 
-Perhaps the most technically challenging aspect of my internship was writing ROS 2 servers to manage low-level control components. ROS 2 (Robot Operating System 2) is the backbone of modern robotics software, and I was responsible for creating robust, reliable services that other systems could depend on.
+## Collecting data for everyday objects
 
-These servers handled critical functions like:
-- Managing real-time control loops for precise movement
-- Interfacing with hardware drivers
-- Implementing safety monitoring systems
-- Facilitating communication between different robot subsystems
+I also collected RGB images for a YOLO object-detection model. The objects were deliberately ordinary: cans, mugs, books, and other things you might find around an office. That made the task feel close to the kind of environment where a service robot would actually have to operate.
 
-## What I Learned
+Collecting the data was a useful reminder that perception systems depend on the details of the environment. Lighting, viewpoints, object placement, and the variety of everyday objects all matter. The dataset is not a glamorous part of a robotics project, but it determines what the detector has a chance of recognising later.
 
-My time at NEURA Robotics taught me invaluable lessons about professional robotics development:
+## Seeing MiPA outside the lab
 
-1. **The importance of reliability**: In production robotics, code that works 99% of the time isn't good enough - that 1% failure can lead to costly downtime or even safety risks.
+The most memorable part of the internship came at the end, when we presented MiPA and demonstrated our work at the Automatica fair in Munich. After spending months moving between XML descriptions, simulator problems, ROS 2 services, and experiments, it was different to see the robot presented as a complete system to people outside the development team.
 
-2. **Systems thinking**: Robots are complex integrated systems where software, electronics, and mechanics must work together seamlessly.
+That final demo made the separate pieces feel connected. The simulation work, the safety layers, the perception experiments, and the robot itself were all part of the same challenge: making an autonomous machine do something useful without losing track of what can go wrong.
 
-3. **The value of simulation**: While not perfect, simulation environments enable rapid iteration and testing of dangerous scenarios without risking hardware damage.
+## What I took away
 
-4. **Balancing research and practical application**: The robotics industry requires finding the sweet spot between exploring cutting-edge techniques and delivering stable, usable solutions.
+NEURA was my first experience contributing to a professional robotics platform, and it changed how I think about robotics projects. The interesting algorithms matter, but they are only one part of the work. Accurate models, stable simulation, safe system behaviour, and communication with the people building the hardware are just as important.
 
-## Impact and Takeaways
-
-The projects I worked on directly contributed to NEURA's development workflow and robot capabilities. The improved simulation environment became a standard tool for the development team, and my ROS 2 servers were integrated into the robot's core control system.
-
-The experience also deepened my passion for robotics development, particularly at the intersection of simulation, control systems, and machine learning. There's something uniquely satisfying about seeing code you've written literally move a robot in the physical world!
-
-## What's Next?
-
-Working with the team at NEURA Robotics confirmed my desire to pursue a career at the cutting edge of robotics. The field is evolving rapidly, with new capabilities emerging as computational power, sensors, and algorithms improve.
-
-I'm particularly excited about continued advancements in:
-- Human-robot collaboration
-- Learning-based control systems
-- Multi-robot coordination
-- Simulation-to-reality transfer
-
-If you're interested in robotics development or have questions about working in industrial R&D, feel free to reach out! I'm always happy to chat about robots, ROS, and the future of human-machine collaboration. 
+The internship also gave me a practical continuation of my BSc thesis. I could take ideas I had developed in a university project, try them on a different robot, and see the extra constraints that appear when the software has to interact with a real platform. That combination of research ideas and careful engineering is what I found most rewarding about the experience.

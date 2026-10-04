@@ -10,9 +10,9 @@ image: /assets/images/thesis_ranking_flip.png
 
 My MSc thesis started as an attempt to make vision-language models more accurate at open-world recognition. It ended up somewhere more interesting: showing that the instruments we measure these models with are not neutral, and that a lenient judge and a strict audit can flip the ranking of the same models on the same data.
 
-<!--more-->
+*By Juan Camacho Mohedano, MSc in Artificial Intelligence Systems, University of Trento. Thesis supervised by [Elisa Ricci](https://mhug.disi.unitn.it/people/elisa-ricci/) and [Marco Garosi](https://github.com/marco-garosi/). All figures below are from my thesis and defence presentation unless noted otherwise.*
 
-*By Juan Camacho Mohedano, MSc in Artificial Intelligence Systems, University of Trento. All figures below are from my thesis and defence presentation unless noted otherwise.*
+<!--more-->
 
 ## The Problem Nobody Can Score
 

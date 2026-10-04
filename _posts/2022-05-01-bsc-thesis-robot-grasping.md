@@ -9,84 +9,48 @@ tags: [robotics, TIAGo, 6DoF, grasping, computer-vision, deep-learning, RoboCup]
 image: /assets/images/contact_graspnet_inference_example.png
 ---
 
-Ever wondered how robots pick up objects without dropping or crushing them? That's exactly what I spent months figuring out for my BSc thesis at the University of Leeds!
+For my BSc thesis in Computer Science with AI at the University of Leeds, I worked on 6DoF robot grasping for the TIAGo robot. The aim was to let TIAGo find a sensible way to pick objects up from a table in a simulated room, as part of the kind of service-robot task used in RoboCup@Home.
+
+*Thesis supervised by [Mehmet Dogar](https://eps.leeds.ac.uk/computing/staff/743/dr-mehmet-dogar) at the University of Leeds and [Matteo Leonetti](https://www.kcl.ac.uk/people/matteo-leonetti) at King's College London.*
 
 <!--more-->
 
-## The Challenge: Teaching Robots to Grab Like Humans
+## The problem
 
-For my Computer Science with AI degree, I tackled one of robotics' classic challenges: **object grasping**. Specifically, I worked on generating 6 Degrees of Freedom (6DoF) grasps for the TIAGo robot. Sounds fancy, right? 
+A grasp is not just a point on an object. The robot has to decide where the gripper should be, how it should be oriented, and whether the resulting motion is physically possible. That becomes difficult as soon as objects have different shapes, appear from different viewpoints, or are close together on a table.
 
-In human terms, I taught a robot how to analyze objects, figure out the best way to position its gripper (robot hand), and successfully pick things up without making a mess. Think of it as teaching a toddler to grab objects, except this toddler is made of metal and runs on code.
+The project therefore had to connect several pieces: perception to understand the scene, grasp generation to propose a hand pose, and execution to send that pose to the robot. A good grasp in isolation was not enough if the robot could not reach it safely.
 
 ![TIAGo robot in simulation environment](/assets/images/contact_graspnet_inference_example.png)
-*The TIAGo robot in simulation, plotting its next grasp. (You'll need to replace this with an actual screenshot from your project!)*
+*A TIAGo grasping example in simulation.*
 
-## Why This Matters
-
-Autonomous service robots need to navigate human environments and manipulate all kinds of objects - from coffee mugs to oddly-shaped toys. The challenge is that:
-
-1. Household objects come in countless shapes and sizes
-2. Objects have different physical properties (fragile vs. sturdy)
-3. Robots often encounter objects they've never seen before
-4. The real world is messy and unpredictable
-
-Getting this right means robots that can genuinely help in homes, hospitals, and other human spaces.
-
-## The Technical Bits
-
-I combined two main components to create a complete autonomous grasping system:
+## From the camera to a grasp
 
 ![System Overview Diagram](/assets/images/system_overview.png)
 *System architecture overview showing the perception, grasp generation, and execution components*
 
-### 1. 3D Perception System
-This system used neural networks to:
-- Detect objects in the robot's environment
-- Generate point clouds from RGB-D camera data
-- Segment individual objects even when they're clustered together
+The perception part of the system used RGB-D data to build a view of the scene. It detected objects, generated point clouds, and separated objects that were close together so that the grasping stage could work with them individually.
 
-### 2. Grasp Generation Systems
+The output of that stage was passed to the grasp generator, which proposed possible six-degree-of-freedom poses for the gripper. I then compared two different ways of producing those poses.
 
-I implemented and compared two approaches:
+The first was an analytical approach based on geometry and vector computations. It was quick and explicit: given the shape and the constraints of the gripper, it could calculate candidate grasps directly. The second was a learning-based approach that predicted successful grasps from examples. It was more adaptable to unfamiliar shapes, but it also introduced the usual questions about training data and generalisation.
 
-**Analytical Approach:**
-- Used geometric algorithms to identify potential grasp points
-- Considered physical constraints of the robot's gripper
-- Fast but less adaptable to unusual shapes
-
-**Learning-Based Approach:**
-- Trained neural networks to predict successful grasps
-- Learned from thousands of example grasps
-- More adaptable to novel objects
-
-The learning-based model consistently outperformed the analytical approach, especially with odd-shaped objects (which are everywhere in the real world!).
+In the experiments, the learning-based method performed better overall, particularly on objects that were less regular. The comparison was useful because it made the trade-off visible: analytical methods are easier to reason about, while learned methods can handle patterns that are difficult to describe with a fixed set of geometric rules.
 
 ## From Simulation to RoboCup
 
-My experiments focused on cleaning up tables in a simulated room - a common task in service robotics competitions like RoboCup@Home. The system performed really well, with the TIAGo robot successfully picking up various objects without human intervention.
+My experiments focused on cleaning up tables in a simulated room, a common service-robot task. The complete system took an RGB-D view of the table, generated candidate grasps, and sent the selected one to TIAGo for execution.
 
-The coolest part? My grasping system was integrated into the Leeds Autonomous Service Robots (LASR) team's codebase for use in the RoboCup competition! It's amazing to see your code helping a robot compete on an international stage.
+The most rewarding part was seeing the grasping system integrated into the Leeds Autonomous Service Robots (LASR) team's codebase for RoboCup. The work stopped being an isolated thesis experiment and became one component of a larger robot that had to navigate, perceive, plan, and act as a team.
 
-## Lessons Learned
+## What I took away
 
-Working on this project taught me:
+The project taught me how large the gap can be between a method that works in a controlled experiment and a system that has to operate as part of a robot. Perception errors affect grasp generation, grasp poses affect motion planning, and small integration details can stop the whole task from working.
 
-1. The gap between theory and practice in robotics is HUGE
-2. Simulation is amazing for rapid prototyping, but has limitations
-3. Machine learning approaches often outperform analytical methods for complex real-world tasks
-4. Integration of multiple systems (perception, planning, grasping) requires careful state management
+Simulation made it possible to iterate quickly without risking hardware, but it also hid some of the problems that appear on a physical platform. That tension between fast experimentation and realistic behaviour stayed with me when I later worked with MiPA at NEURA Robotics.
 
-## What's Next?
-
-This project was just the beginning of my robotics journey. The techniques I developed could be extended to:
-- Two-handed manipulation
-- Grasping dynamic (moving) objects
-- Learning from human demonstrations
-- Integrating tactile feedback for more precise grasps
-
-If you're curious about robot grasping or want to discuss anything related to autonomous robots, feel free to reach out! I'm always happy to chat about robots picking things up (and sometimes dropping them).
+This thesis was also the first time I saw a research idea become part of a real competition codebase. That combination of geometry, machine learning, and robot integration is what made the project such a useful foundation for the robotics work that followed.
 
 ## References
 
-The project code is available on [GitLab](https://gitlab.com/f1683) (private repository, but I can share specific components upon request). 
+The project code is available on [GitLab](https://gitlab.com/f1683) (private repository, but I can share specific components upon request).
