@@ -98,8 +98,8 @@ body {
     margin: 0;
     padding: 0;
     transition: color 0.3s ease, background-color 0.3s ease;
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 19px;
+    font-weight: 300;
 }
 
 .container {
@@ -127,6 +127,11 @@ h2 {
 
 h3 {
     font-size: 1.25rem;
+}
+
+strong,
+b {
+    font-weight: 700;
 }
 
 p, ul, ol {
@@ -245,7 +250,7 @@ section {
     margin: 0 0 1rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
-    font-size: 3rem;
+    font-size: 2.25rem;
 }
 
 .page-title {
@@ -262,7 +267,7 @@ section {
 .bio {
     display: flow-root;
     margin-bottom: 2.5rem;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
 }
 
 .profile-photo {
@@ -392,7 +397,7 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .hl-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 300;
     line-height: 1.35;
     margin: 0;
@@ -416,7 +421,7 @@ html:not([data-theme]) .theme-toggle {
 
 .hl-desc {
     margin: 0.25rem 0 0;
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.55;
     color: var(--text-muted);
 }
@@ -494,7 +499,10 @@ footer p {
         font-size: 1.75rem;
     }
 
-    .section-title,
+    .section-title {
+        font-size: 1.9rem;
+    }
+
     .page-title {
         font-size: 2.5rem;
     }
@@ -528,7 +536,7 @@ footer p {
 
 .post-content {
     margin-bottom: 2rem;
-    font-size: 1.25rem;
+    font-size: 1.375rem;
 }
 
 .post-content h2 {
