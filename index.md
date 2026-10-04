@@ -21,8 +21,8 @@ layout: default
         During my degree I worked on a few research projects: measuring what
         multimodal models know for my <a href="/blog/2026/07/22/what-multimodal-models-know/">thesis</a>,
         <a href="/blog/2026/02/19/expert-neurons-brain-alignment/">interpretability and brain alignment</a>,
-        <a href="/blog/2026/06/22/reasoning-shortcuts-raven/">reasoning shortcuts</a> in neuro-symbolic
-        models, and <a href="/blog/2024/03/01/test-time-adaptation/">test-time adaptation</a>.
+        and <a href="/blog/2026/06/22/reasoning-shortcuts-raven/">reasoning shortcuts</a> in neuro-symbolic
+        models.
     </p>
 </section>
 
@@ -65,13 +65,7 @@ layout: default
             <p class="hl-desc">13 open-source log parsers compared on accuracy, throughput, memory and tuning effort.</p>
         </li>
         <!-- Alpha-CLIP is unpublished (published: false) and intentionally omitted here. -->
-        <li>
-            <div class="hl-top">
-                <h3 class="hl-title"><a href="/blog/2024/03/01/test-time-adaptation/">Test-Time Adaptation for VLMs</a></h3>
-                <span class="hl-meta">Course project · 2024</span>
-            </div>
-            <p class="hl-desc">Where cache-based test-time adaptation breaks on non-i.i.d. streams, and a waiting-list fix that revisits uncertain samples.</p>
-        </li>
+        <!-- Test-Time Adaptation is unpublished (published: false) and intentionally omitted here. -->
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2023/06/30/neura-robotics-internship/">R&amp;D on the MiPA Robot Platform</a></h3>
