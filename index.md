@@ -5,29 +5,29 @@ layout: default
 <section class="bio">
     <img class="profile-photo" src="{{ "/assets/images/profile_pic.png" | relative_url }}" alt="{{ site.title }}" width="460" height="460">
     <p>
-        Hi, I'm Juan. I recently graduated from the University of Trento with an
-        MSc in AI Systems, and I'm looking for new adventures in AI.
+        Hi, I'm Juan. I recently completed an MSc in AI Systems at the
+        University of Trento. My work so far has moved between machine-learning
+        research, applied AI engineering, and robotics.
     </p>
     <p>
-        I've explored different areas in my masters, and that led me to my
-        current interests in AI:
+        During my master's, I explored several areas of AI, including:
     </p>
     <ul class="interests">
-        <li>Post-training and evaluations of LLM agents, which is what I'm targeting right now</li>
-        <li>Computer vision and multimodal models</li>
-        <li>Robotics</li>
+        <li>Evaluation and post-training for language and multimodal models</li>
+        <li>Interpretability and model-brain alignment</li>
+        <li>Neuro-symbolic reasoning and robotics</li>
     </ul>
     <p>
-        During my degree I worked on a few research projects: measuring what
-        multimodal models know for my <a href="/blog/2026/07/22/what-multimodal-models-know/">thesis</a>,
+        During my degree I worked on measuring what multimodal models know for
+        my <a href="/blog/2026/07/22/what-multimodal-models-know/">thesis</a>,
         <a href="/blog/2026/02/19/expert-neurons-brain-alignment/">interpretability and brain alignment</a>,
-        and <a href="/blog/2026/06/22/reasoning-shortcuts-raven/">reasoning shortcuts</a> in neuro-symbolic
-        models.
+        and <a href="/blog/2026/06/22/reasoning-shortcuts-raven/">reasoning shortcuts</a> in
+        neuro-symbolic models.
     </p>
 </section>
 
-<section id="projects">
-    <h2 class="section-title">projects</h2>
+<section id="research">
+    <h2 class="section-title">research and theses</h2>
     <ul class="home-list">
         <li>
             <div class="hl-top">
@@ -50,6 +50,12 @@ layout: default
             </div>
             <p class="hl-desc">Sparse concept-specific neurons in GPT-2 align with fMRI data better than the dense embeddings around them.</p>
         </li>
+    </ul>
+</section>
+
+<section id="engineering">
+    <h2 class="section-title">engineering work</h2>
+    <ul class="home-list">
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2025/07/31/covap-ai-internship/">AI Workflows for Business Automation</a></h3>
@@ -64,8 +70,16 @@ layout: default
             </div>
             <p class="hl-desc">13 open-source log parsers compared on accuracy, throughput, memory and tuning effort.</p>
         </li>
-        <!-- Alpha-CLIP is unpublished (published: false) and intentionally omitted here. -->
-        <!-- Test-Time Adaptation is unpublished (published: false) and intentionally omitted here. -->
+    </ul>
+</section>
+
+<section id="robotics">
+    <h2 class="section-title">robotics and competitions</h2>
+    <p>
+        I also co-led the university robotics team with Jared and competed in
+        RoboCup. My robotics work includes:
+    </p>
+    <ul class="home-list">
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2023/06/30/neura-robotics-internship/">R&amp;D on the MiPA Robot Platform</a></h3>
@@ -81,6 +95,11 @@ layout: default
             <p class="hl-desc">Generating six-degree-of-freedom grasps for the TIAGo robot, built for the LASR team and RoboCup.</p>
         </li>
     </ul>
+    <p>
+        I have also taken part in the NASA International Space Apps Challenge,
+        the Hub Innovazione Trentino Challenge, SciRoc, and RoboCup@Home
+        Education, where our team received a Gold Award.
+    </p>
 </section>
 
 <section id="contact">
