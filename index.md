@@ -27,7 +27,7 @@ layout: default
     </p>
     <p>
         I would be very happy to discuss any of these topics if you are
-        interested. Feel free to reach out to me via email or X/twitter.
+        interested. Feel free to reach out to me via email.
     </p>
 </section>
 
