@@ -262,6 +262,7 @@ section {
 .bio {
     display: flow-root;
     margin-bottom: 2.5rem;
+    font-size: 1.15rem;
 }
 
 .profile-photo {
@@ -415,7 +416,7 @@ html:not([data-theme]) .theme-toggle {
 
 .hl-desc {
     margin: 0.25rem 0 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.55;
     color: var(--text-muted);
 }

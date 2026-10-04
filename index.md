@@ -45,7 +45,7 @@ layout: default
         </li>
         <li>
             <div class="hl-top">
-                <h3 class="hl-title"><a href="/blog/2026/02/19/expert-neurons-brain-alignment/">Expert Neurons vs. the Brain</a></h3>
+                <h3 class="hl-title"><a href="/blog/2026/02/19/expert-neurons-brain-alignment/">Do a Language Model's Expert Neurons Think Like a Human Brain?</a></h3>
                 <span class="hl-meta">Neural systems · 2026</span>
             </div>
             <p class="hl-desc">Sparse concept-specific neurons in GPT-2 align with fMRI data better than the dense embeddings around them.</p>
