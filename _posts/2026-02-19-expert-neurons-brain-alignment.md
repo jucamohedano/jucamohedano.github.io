@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Do a Language Model's Expert Neurons Think Like a Brain?"
+title: "Do a Language Model's Expert Neurons Think Like a Human Brain?"
 date: 2026-02-19
 excerpt_separator: <!--more-->
 categories: [machine-learning, research, projects]
