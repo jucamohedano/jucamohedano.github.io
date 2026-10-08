@@ -79,7 +79,16 @@ layout: default
 </section>
 
 <section id="robotics">
-    <h2 class="section-title">robotics and competitions</h2>
+    <h2 class="section-title">achievements and competitions</h2>
+    <ul class="home-list">
+        <li>
+            <div class="hl-top">
+                <h3 class="hl-title">HackSpain 2026</h3>
+                <span class="hl-meta">Winner · HappyRobot track</span>
+            </div>
+            <p class="hl-desc">Won the HappyRobot track at the first edition of HackSpain.</p>
+        </li>
+    </ul>
     <p>
         I also co-led the university robotics team with Jared and competed in
         RoboCup. My robotics work includes:
