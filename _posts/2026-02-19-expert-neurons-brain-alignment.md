@@ -239,7 +239,7 @@ The core of the method is a search: every one of GPT-2's 82,944 neurons is score
 </svg>
 </div>
 
-*Finding the experts. The headline counts and the per-concept bars are measured from the run; the per-sub-layer density field and the ranking curve are illustrative, since the per-neuron AP arrays are not in the published artifacts.*
+*Finding the experts. The headline counts and the per-concept bars are measured from the run. The per-sub-layer density field and the ranking curve are illustrative, since the per-neuron AP arrays are not in the published artifacts.*
 
 Two parts of that picture deserve unpacking.
 
@@ -284,7 +284,7 @@ The raw correlations are small (mean ρ ≈ 0.01) and most regions don't survive
 
 - Expert neurons align with fMRI representational geometry better than the dense embeddings containing them, in the layers where semantics concentrate.
 - MLP sub-layers carry more brain-aligned signal than attention, and the MLP output projection shows the largest gain over its dense baseline.
-- Selectivity has a sweet spot: moderate AP thresholds (0.5-0.7) work; very strict ones destroy the geometry.
-- Expert redundancy in GPT-2 is low, so unique-expert filtering is a small correction here; it may matter more in larger models.
+- Selectivity has a sweet spot: moderate AP thresholds (0.5-0.7) work, while very strict ones destroy the geometry.
+- Expert redundancy in GPT-2 is low, so unique-expert filtering is a small correction here. It may matter more in larger models.
 
 Code is at [experts-ml-selfcond](https://github.com/jucamohedano/experts-ml-selfcond), and the generated sentence dataset is [on Hugging Face](https://huggingface.co/datasets/jucamohedano/Qwen3-30B-A3B-Instruct-2507_custom_60_cot).

@@ -103,7 +103,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -260,12 +260,10 @@ section {
 .section-title {
     margin: 0 0 1.25rem;
     color: var(--accent);
-    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    line-height: 1.6;
-    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 1.25;
 }
 
 .page-title {
@@ -458,6 +456,17 @@ html:not([data-theme]) .theme-toggle {
     margin-bottom: 1.5rem;
 }
 
+.achievement-entry .hl-title a {
+    color: var(--link-color);
+}
+
+.forthcoming {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
 .bio ul.interests li::marker {
     color: var(--accent);
 }
@@ -528,6 +537,11 @@ footer p {
 }
 
 @media (max-width: 600px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -547,6 +561,10 @@ footer p {
 
     .page-title {
         font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
     }
 
     .hl-top {

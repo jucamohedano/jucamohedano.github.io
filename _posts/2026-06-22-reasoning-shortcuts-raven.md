@@ -24,7 +24,7 @@ Recent work on [rsbench](https://unitn-sml.github.io/rsbench/) showed this promi
 
 ## The Task: Raven's Progressive Matrices
 
-A RAVEN problem is a 3x3 matrix of small greyscale images with the bottom-right cell missing. The first two rows establish rules over attributes like **Type** (shape), **Size**, and **Color**; the solver must pick which of eight candidate panels correctly completes the third row.
+A RAVEN problem is a 3x3 matrix of small greyscale images with the bottom-right cell missing. The first two rows establish rules over attributes like **Type** (shape), **Size**, and **Color**. The solver must pick which of eight candidate panels correctly completes the third row.
 
 ![Example RAVEN problem](/assets/images/raven_example_problem.png)
 *An example RAVEN-style problem: the context matrix on top, the eight candidate panels below. Figure from the RAVEN paper's supplementary material.*
@@ -64,12 +64,12 @@ Supervising concepts on just **1% of training samples** breaks the shortcut, but
 
 ## Does It Scale? RAVEN-4x4x4
 
-We repeated the study with four values per attribute. Learning gets much harder: a stronger entropy weight and warmup are needed before any seed escapes, and the best unsupervised answer F1 drops to 0.54. But the shortcut itself is unchanged: Color gets grounded perfectly, Type and Size don't, and the same 1% concept supervision removes it (answer F1 0.96). The difficulty changes; the failure mode doesn't.
+We repeated the study with four values per attribute. Learning gets much harder: a stronger entropy weight and warmup are needed before any seed escapes, and the best unsupervised answer F1 drops to 0.54. But the shortcut itself is unchanged: Color gets grounded perfectly, Type and Size don't, and the same 1% concept supervision removes it (answer F1 0.96). The difficulty changes, but the failure mode doesn't.
 
 ## Takeaways
 
 - Raven's Progressive Matrices do admit reasoning shortcuts under NeSy training, answering the open question from the rsbench paper in the affirmative.
-- The shortcut is invisible to task metrics and per-attribute collapse alone; you need per-attribute concept F1 and pairwise/joint collapse to see it.
+- The shortcut is invisible to task metrics and per-attribute collapse alone. You need per-attribute concept F1 and pairwise/joint collapse to see it.
 - A tiny amount of targeted concept supervision (1% of samples, on the attributes the model ignores) removes it entirely.
 
 The full write-up is available as a [PDF report](/assets/files/NeSy_RAVEN_RS_BENCH.pdf). The code lives in my [rsbench fork (raven branch)](https://github.com/jucamohedano/rsbench-code/tree/raven), with experiment logs on Weights & Biases for both [RAVEN-3x3x3](https://wandb.ai/jucamohedano/raven-3x3x3) and [RAVEN-4x4x4](https://wandb.ai/jucamohedano/raven-4x4x4).
