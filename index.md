@@ -3,8 +3,8 @@ layout: default
 ---
 
 <section class="bio">
-    <img class="profile-photo" src="{{ "/assets/images/profile_pic.png" | relative_url }}" alt="{{ site.title }}" width="460" height="460">
     <h1 class="home-greeting">Hi! I'm Juan</h1>
+    <img class="profile-photo" src="{{ "/assets/images/profile_pic.png" | relative_url }}" alt="{{ site.title }}" width="460" height="460">
     <p>
         This year I finished my master's degree in AI Systems at the University
         of Trento, Italy. During my time there I worked on a few research
