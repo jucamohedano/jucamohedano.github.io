@@ -1,14 +1,14 @@
-/* Warm notebook: readable prose with monospaced navigation and dates. */
+/* Blue notebook: readable prose with monospaced navigation and dates. */
 :root {
     /* Light Theme (Default) */
     --background-color: #ffffff;
-    --text-color: #30302e;
-    --heading-color: #20201e;
-    --text-muted: #706b64;
-    --link-color: #ad4d1d;
-    --border-color: #e6e0d7;
-    --code-bg: #f3eee6;
-    --accent: #ad4d1d;
+    --text-color: #202631;
+    --heading-color: #171d28;
+    --text-muted: #66707d;
+    --link-color: #2354b8;
+    --border-color: #e2e6ed;
+    --code-bg: #f3f5f8;
+    --accent: #2354b8;
     --callout-bg: #eef4fc;
     --callout-border: #d3e3f8;
     --code-accent: #b3255e;
@@ -28,14 +28,14 @@
 
 /* Dark Theme */
 [data-theme="dark"] {
-    --background-color: #201e1b;
-    --text-color: #e4dfd7;
-    --heading-color: #f7f2ea;
-    --text-muted: #b0a699;
-    --link-color: #f0ab78;
-    --border-color: #494139;
-    --code-bg: #2d2823;
-    --accent: #f0ab78;
+    --background-color: #1d2128;
+    --text-color: #e2e7ef;
+    --heading-color: #f4f7fc;
+    --text-muted: #a8b2c1;
+    --link-color: #8eb7ff;
+    --border-color: #3b4350;
+    --code-bg: #282f3a;
+    --accent: #8eb7ff;
     --callout-bg: #14212f;
     --callout-border: #24405e;
     --code-accent: #f27da2;
@@ -56,14 +56,14 @@
 /* No-JS fallback: follow the OS theme when JS never set data-theme */
 @media (prefers-color-scheme: dark) {
     html:not([data-theme]) {
-        --background-color: #201e1b;
-        --text-color: #e4dfd7;
-        --heading-color: #f7f2ea;
-        --text-muted: #b0a699;
-        --link-color: #f0ab78;
-        --border-color: #494139;
-        --code-bg: #2d2823;
-        --accent: #f0ab78;
+        --background-color: #1d2128;
+        --text-color: #e2e7ef;
+        --heading-color: #f4f7fc;
+        --text-muted: #a8b2c1;
+        --link-color: #8eb7ff;
+        --border-color: #3b4350;
+        --code-bg: #282f3a;
+        --accent: #8eb7ff;
         --callout-bg: #14212f;
         --callout-border: #24405e;
         --code-accent: #f27da2;
@@ -103,7 +103,7 @@ body {
 }
 
 .container {
-    max-width: 1040px;
+    max-width: 1060.8px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -203,14 +203,13 @@ pre code {
     gap: 0.75rem 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .site-title {
     color: var(--heading-color);
-    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-    font-size: 0.9375rem;
-    font-weight: 400;
+    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: 500;
 }
 
 .site-title:hover {
@@ -259,10 +258,10 @@ section {
 
 .section-title {
     margin: 0 0 1.25rem;
-    color: var(--accent);
+    color: var(--heading-color);
     font-family: inherit;
     font-size: 1.75rem;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.25;
 }
 
@@ -358,7 +357,7 @@ html:not([data-theme]) .theme-toggle {
 .post-item .post-title {
     margin: 0 0 0.3rem;
     font-size: 1.35rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3;
 }
 
@@ -418,7 +417,7 @@ html:not([data-theme]) .theme-toggle {
 
 .hl-title {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.35;
     margin: 0;
 }
@@ -468,7 +467,7 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .bio ul.interests li::marker {
-    color: var(--accent);
+    color: var(--text-color);
 }
 
 /* Footer */
@@ -547,7 +546,7 @@ footer p {
     }
 
     .site-title {
-        font-size: 0.9375rem;
+        font-size: 1.0625rem;
     }
 
     .site-nav {
@@ -606,7 +605,7 @@ footer p {
 .post-header .post-title {
     margin: 0 0 1rem;
     font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: -0.03em;
     line-height: 1.25;
     overflow-wrap: anywhere;
@@ -626,7 +625,7 @@ footer p {
 .post-content h2 {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--accent);
+    color: var(--heading-color);
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: -0.02em;

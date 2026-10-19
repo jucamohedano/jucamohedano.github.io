@@ -11,13 +11,13 @@ layout: default
         between a language model and the human brain. My current interests are:
     </p>
     <ul class="interests">
-        <li>post-training and evaluation of language models</li>
+        <li>post-training and evaluation of LLMs</li>
         <li>test-time adaptation</li>
-        <li>Coding LLM agents</li>
+        <li>coding agents</li>
     </ul>
     <p>
-        At the moment I am running a side project, post-training a model to
-        learn the RLM env to generate CUDA kernels.
+        At the moment I am working on a side project, post-training a model to
+        learn the RLM environment to generate CUDA kernels.
     </p>
     <p>
         I would be very happy to discuss any of these topics if you are
@@ -26,7 +26,7 @@ layout: default
 </section>
 
 <section id="projects">
-    <h2 class="section-title">research and theses</h2>
+    <h2 class="section-title">research and thesis</h2>
     <ul class="home-list">
         <li>
             <div class="hl-top">
@@ -88,7 +88,7 @@ layout: default
 </section>
 
 <section id="achievements">
-    <h2 class="section-title">achievements and competitions</h2>
+    <h2 class="section-title">achievement and competitions</h2>
     <div class="achievement-entry">
         <div class="hl-top">
             <h3 class="hl-title">HackSpain 2026 <span class="forthcoming">(blog to come)</span></h3>
