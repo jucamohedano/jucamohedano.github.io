@@ -16,8 +16,8 @@ layout: default
         <li>coding agents</li>
     </ul>
     <p>
-        At the moment I am working on a side project, post-training a model to
-        learn the RLM environment to generate CUDA kernels.
+        At the moment I am working on a side project,
+        <a href="https://github.com/jucamohedano/rlm/tree/feat/kernel-rlm-cuda">post-training a model to learn the RLM environment to generate CUDA kernels</a>.
     </p>
     <p>
         I would be very happy to discuss any of these topics if you are
@@ -104,7 +104,6 @@ layout: default
 </section>
 
 <section id="contact">
-    <h2 class="section-title">contact</h2>
     <nav class="social-links" aria-label="Contact and profiles">
         <a href="mailto:{{ site.email }}">email</a>
         <span class="nav-separator" aria-hidden="true">/</span>
