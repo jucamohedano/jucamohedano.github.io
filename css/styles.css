@@ -258,7 +258,7 @@ section {
 
 .section-title {
     margin: 0 0 1.25rem;
-    color: var(--heading-color);
+    color: var(--accent);
     font-family: inherit;
     font-size: 1.75rem;
     font-weight: 500;
@@ -457,6 +457,17 @@ html:not([data-theme]) .theme-toggle {
 
 .achievement-entry .hl-title a {
     color: var(--link-color);
+}
+
+.bio a,
+.hl-desc a,
+.post-excerpt a,
+.post-content a,
+.achievement-entry .hl-title a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
 }
 
 .forthcoming {
