@@ -406,11 +406,11 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .home-list li {
-    padding: 0 0 1.5rem;
+    padding: 0 0 0.9rem;
 }
 
 .home-list li:last-child {
-    padding-bottom: 1rem;
+    padding-bottom: 0;
 }
 
 .hl-top {
@@ -443,11 +443,23 @@ html:not([data-theme]) .theme-toggle {
     white-space: nowrap;
 }
 
-.hl-desc {
-    margin: 0.25rem 0 0;
-    font-size: 1.125rem;
-    line-height: 1.55;
-    color: var(--text-muted);
+.all-projects {
+    margin: 1.25rem 0 0;
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.875rem;
+}
+
+.notables {
+    padding-left: 1.2em;
+}
+
+.notables li {
+    margin-bottom: 0.6rem;
+}
+
+.notables li::marker,
+.bio ul.interests li::marker {
+    color: var(--accent);
 }
 
 /* Footer */
@@ -550,14 +562,26 @@ footer p {
     }
 }
 
-/* Blog Post Styles */
+/* Individual project notes */
+.post-back {
+    display: inline-block;
+    margin-bottom: 1.75rem;
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
 .post-header {
     margin-bottom: 2.5rem;
 }
 
 .post-header .post-title {
-    margin: 0 0 0.5rem;
-    line-height: 1.2;
+    margin: 0 0 1rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
 }
 
 .post-header .post-meta {
@@ -567,19 +591,37 @@ footer p {
 .post-content {
     margin-bottom: 2rem;
     font-size: 1.375rem;
+    line-height: 1.7;
+    overflow-wrap: break-word;
 }
 
 .post-content h2 {
     margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.post-content ul,
+.post-content ol {
+    padding-left: 1.4em;
 }
 
 .post-content li {
     margin-bottom: 0.4rem;
 }
 
+.post-content li::marker {
+    color: var(--accent);
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
 .post-content h3 {
     margin-top: 1.75rem;
-    font-size: 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 500;
 }
 
 .post-content strong {
@@ -595,6 +637,40 @@ footer p {
 
 .post-content img:hover {
     opacity: 0.9;
+}
+
+.post-content img + em,
+.post-content p > em:only-child {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.post-content blockquote {
+    border-left-width: 2px;
+    font-size: inherit;
+}
+
+.post-content table {
+    display: block;
+    max-width: 100%;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-variant-numeric: tabular-nums;
+}
+
+.post-content th,
+.post-content td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.post-content th {
+    color: var(--heading-color);
+    font-weight: 500;
 }
 
 /* Inline SVG diagrams: theme-aware, scale with the column */
@@ -626,14 +702,45 @@ footer p {
     margin-top: 3rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--border-color);
+    gap: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
 }
 
 .post-navigation a {
-    max-width: 45%;
+    flex: 0 1 50%;
+    min-width: 0;
+    color: var(--heading-color);
+    overflow-wrap: anywhere;
+}
+
+.post-navigation a:hover {
+    color: var(--accent);
+}
+
+.post-navigation-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.75rem;
+    font-weight: 400;
 }
 
 .post-navigation .next {
     margin-left: auto;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .post-navigation {
+        flex-direction: column;
+    }
+
+    .post-navigation .next {
+        margin-left: 0;
+        text-align: left;
+    }
 }
 
 /* Syntax Highlighting */

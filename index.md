@@ -31,89 +31,66 @@ layout: default
     </p>
 </section>
 
-<section id="research">
-    <h2 class="section-title">research and theses</h2>
+<section id="projects">
+    <h2 class="section-title">selected projects</h2>
     <ul class="home-list">
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2026/07/22/what-multimodal-models-know/">What Multimodal Models Know but Don't Say</a></h3>
-                <span class="hl-meta">MSc thesis · 2026</span>
+                <time class="hl-meta" datetime="2026-07-22">2026</time>
             </div>
-            <p class="hl-desc">A sampling-based evaluation framework that separates what an MLLM knows from what it reliably says.</p>
         </li>
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2026/06/22/reasoning-shortcuts-raven/">Discovering Reasoning Shortcuts in RAVEN</a></h3>
-                <span class="hl-meta">Advanced ML · 2026</span>
+                <time class="hl-meta" datetime="2026-06-22">2026</time>
             </div>
-            <p class="hl-desc">A DeepProbLog solver scores 0.91 answer F1 on Raven's Progressive Matrices while two of its three concepts stay at chance.</p>
         </li>
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2026/02/19/expert-neurons-brain-alignment/">Do a Language Model's Expert Neurons Think Like a Human Brain?</a></h3>
-                <span class="hl-meta">Neural systems · 2026</span>
+                <time class="hl-meta" datetime="2026-02-19">2026</time>
             </div>
-            <p class="hl-desc">Sparse concept-specific neurons in GPT-2 align with fMRI data better than the dense embeddings around them.</p>
         </li>
-    </ul>
-</section>
-
-<section id="engineering">
-    <h2 class="section-title">engineering work</h2>
-    <ul class="home-list">
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2025/07/31/covap-ai-internship/">AI Workflows for Business Automation</a></h3>
-                <span class="hl-meta">COVAP internship · 2025</span>
+                <time class="hl-meta" datetime="2025-07-31">2025</time>
             </div>
-            <p class="hl-desc">Agentic workflows for one of Spain's largest livestock cooperatives, cutting document validation from 30 minutes to under 5.</p>
         </li>
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2025/05/31/benchmarking-log-parsers/">Which Log Parser Should You Actually Use?</a></h3>
-                <span class="hl-meta">Freelance · 2025</span>
+                <time class="hl-meta" datetime="2025-05-31">2025</time>
             </div>
-            <p class="hl-desc">13 open-source log parsers compared on accuracy, throughput, memory and tuning effort.</p>
         </li>
-    </ul>
-</section>
-
-<section id="robotics">
-    <h2 class="section-title">achievements and competitions</h2>
-    <ul class="home-list">
-        <li>
-            <div class="hl-top">
-                <h3 class="hl-title">HackSpain 2026</h3>
-                <span class="hl-meta">Winner · HappyRobot track</span>
-            </div>
-            <p class="hl-desc">Won the HappyRobot track at the first edition of HackSpain.</p>
-        </li>
-    </ul>
-    <p>
-        I also co-led the university robotics team with Jared and competed in
-        RoboCup. My robotics work includes:
-    </p>
-    <ul class="home-list">
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2023/06/30/neura-robotics-internship/">R&amp;D on the MiPA Robot Platform</a></h3>
-                <span class="hl-meta">NEURA Robotics internship · 2023</span>
+                <time class="hl-meta" datetime="2023-06-30">2023</time>
             </div>
-            <p class="hl-desc">Six months on a cognitive robot platform: modular Gazebo description, a drift-correcting physics plugin, and ROS 2 control servers.</p>
         </li>
         <li>
             <div class="hl-top">
                 <h3 class="hl-title"><a href="/blog/2022/05/01/bsc-thesis-robot-grasping/">6DoF Robot Grasping with TIAGo</a></h3>
-                <span class="hl-meta">BSc thesis · 2022</span>
+                <time class="hl-meta" datetime="2022-05-01">2022</time>
             </div>
-            <p class="hl-desc">Generating six-degree-of-freedom grasps for the TIAGo robot, built for the LASR team and RoboCup.</p>
         </li>
     </ul>
-    <p>
-        I have also taken part in the NASA International Space Apps Challenge,
-        the Hub Innovazione Trentino Challenge, SciRoc, and RoboCup@Home
-        Education, where our team received a Gold Award.
-    </p>
+    <p class="all-projects"><a href="{{ "/projects/" | relative_url }}">all project write-ups &rarr;</a></p>
+</section>
+
+<section id="achievements">
+    <h2 class="section-title">a few other things</h2>
+    <ul class="notables">
+        <li>I won the <strong>HappyRobot track</strong> at the first edition of HackSpain in 2026.</li>
+        <li>I co-led the university robotics team with Jared and competed in RoboCup.</li>
+        <li>
+            I have also taken part in the NASA International Space Apps Challenge,
+            the Hub Innovazione Trentino Challenge, SciRoc, and RoboCup@Home
+            Education, where our team received a Gold Award.
+        </li>
+    </ul>
 </section>
 
 <section id="contact">
