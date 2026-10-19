@@ -203,13 +203,14 @@ pre code {
     gap: 0.75rem 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .site-title {
     color: var(--heading-color);
-    font-family: inherit;
-    font-size: 1.125rem;
-    font-weight: 500;
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.9375rem;
+    font-weight: 400;
 }
 
 .site-title:hover {
@@ -557,7 +558,7 @@ footer p {
     }
 
     .site-title {
-        font-size: 1.0625rem;
+        font-size: 0.9375rem;
     }
 
     .site-nav {

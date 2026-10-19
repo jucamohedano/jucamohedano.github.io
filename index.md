@@ -104,7 +104,6 @@ layout: default
 </section>
 
 <section id="contact">
-    <h2 class="section-title">contact</h2>
     <nav class="social-links" aria-label="Contact and profiles">
         <a href="mailto:{{ site.email }}">email</a>
         <span class="nav-separator" aria-hidden="true">/</span>
