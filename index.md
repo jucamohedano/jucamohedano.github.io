@@ -84,7 +84,7 @@ layout: default
     <h2 class="section-title">a few other things</h2>
     <ul class="notables">
         <li>I won the <strong>HappyRobot track</strong> at the first edition of HackSpain in 2026.</li>
-        <li>I co-led the university robotics team with Jared and competed in RoboCup.</li>
+        <li>I co-led the university robotics team with <a href="https://www.linkedin.com/in/jared-w-swift/">Jared</a> and competed in RoboCup.</li>
         <li>
             I have also taken part in the NASA International Space Apps Challenge,
             the Hub Innovazione Trentino Challenge, SciRoc, and RoboCup@Home
