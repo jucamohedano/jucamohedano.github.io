@@ -458,15 +458,6 @@ html:not([data-theme]) .theme-toggle {
     margin-bottom: 1.5rem;
 }
 
-.notables {
-    padding-left: 1.2em;
-}
-
-.notables li {
-    margin-bottom: 0.6rem;
-}
-
-.notables li::marker,
 .bio ul.interests li::marker {
     color: var(--accent);
 }

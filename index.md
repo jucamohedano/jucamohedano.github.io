@@ -81,7 +81,7 @@ layout: default
                 <h3 class="hl-title"><a href="/blog/2022/05/01/bsc-thesis-robot-grasping/">6DoF Robot Grasping with TIAGo</a></h3>
                 <time class="hl-meta" datetime="2022-05-01">2022</time>
             </div>
-            <p class="hl-desc">Generating six-degree-of-freedom grasps for the TIAGo robot, built for the LASR team and RoboCup.</p>
+            <p class="hl-desc">Generating six-degree-of-freedom grasps for the TIAGo robot, built for the LASR team and <a href="https://eps.leeds.ac.uk/computing-undergraduate/news/article/5647/party-time-lasr-team-wins-gold-in-robocup-home-education-challenge">RoboCup</a>.</p>
         </li>
     </ul>
     <p class="all-projects"><a href="{{ "/projects/" | relative_url }}">all project write-ups &rarr;</a></p>
@@ -96,14 +96,11 @@ layout: default
         </div>
         <p class="hl-desc">Won the HappyRobot track at the first edition of HackSpain.</p>
     </div>
-    <ul class="notables">
-        <li>I co-led the university robotics team with <a href="https://www.linkedin.com/in/jared-w-swift/">Jared</a> and competed in RoboCup.</li>
-        <li>
-            I have also taken part in the NASA International Space Apps Challenge,
-            the Hub Innovazione Trentino Challenge, SciRoc, and RoboCup@Home
-            Education, where our team received a Gold Award.
-        </li>
-    </ul>
+    <div class="achievement-entry">
+        <h3 class="hl-title"><a href="https://eps.leeds.ac.uk/computing-undergraduate/news/article/5647/party-time-lasr-team-wins-gold-in-robocup-home-education-challenge">RoboCup</a> and SciRoc</h3>
+        <p class="hl-desc">I co-led the university robotics team with <a href="https://www.linkedin.com/in/jared-w-swift/">Jared</a> and competed in both challenges.</p>
+    </div>
+    <!-- Temporarily hidden: I also took part in the NASA International Space Apps Challenge. -->
 </section>
 
 <section id="contact">
