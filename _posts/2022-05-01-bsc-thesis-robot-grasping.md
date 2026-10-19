@@ -43,6 +43,8 @@ My experiments focused on cleaning up tables in a simulated room, a common servi
 
 The most rewarding part was seeing the grasping system integrated into the Leeds Autonomous Service Robots (LASR) team's codebase for RoboCup. The work stopped being an isolated thesis experiment and became one component of a larger robot that had to navigate, perceive, plan, and act as a team.
 
+For more background on the team, the University of Leeds [covered our gold award in the RoboCup@Home Education Challenge](https://eps.leeds.ac.uk/computing-undergraduate/news/article/5647/party-time-lasr-team-wins-gold-in-robocup-home-education-challenge), including me and [Jared Swift](https://www.linkedin.com/in/jared-w-swift/) among the LASR members.
+
 ## What I took away
 
 The project taught me how large the gap can be between a method that works in a controlled experiment and a system that has to operate as part of a robot. Perception errors affect grasp generation, grasp poses affect motion planning, and small integration details can stop the whole task from working.

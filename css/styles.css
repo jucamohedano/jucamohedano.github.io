@@ -1,7 +1,7 @@
 /* Warm notebook: readable prose with monospaced navigation and dates. */
 :root {
     /* Light Theme (Default) */
-    --background-color: #fdfcf9;
+    --background-color: #ffffff;
     --text-color: #30302e;
     --heading-color: #20201e;
     --text-muted: #706b64;
@@ -99,7 +99,7 @@ body {
     padding: 0;
     transition: color 0.3s ease, background-color 0.3s ease;
     font-size: 19px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .container {
@@ -208,17 +208,14 @@ pre code {
 
 .site-title {
     color: var(--heading-color);
-    font-size: 1.125rem;
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.9375rem;
     font-weight: 400;
 }
 
 .site-title:hover {
     color: var(--heading-color);
     text-decoration: none;
-}
-
-.site-title-first {
-    font-weight: 500;
 }
 
 .site-nav {
@@ -284,19 +281,20 @@ section {
 /* Bio Section */
 .bio {
     display: flow-root;
-    margin-bottom: 3.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-size: 1em;
 }
 
 .home-greeting {
     margin: 0 0 1.5rem;
     letter-spacing: -0.04em;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .profile-photo {
     float: right;
-    width: 25%;
+    width: 28%;
+    max-width: 240px;
     height: auto;
     margin: 0.35rem 0 1rem 2rem;
 }
@@ -406,7 +404,7 @@ html:not([data-theme]) .theme-toggle {
 }
 
 .home-list li {
-    padding: 0 0 0.9rem;
+    padding: 0 0 1.5rem;
 }
 
 .home-list li:last-child {
@@ -449,15 +447,17 @@ html:not([data-theme]) .theme-toggle {
     font-size: 0.875rem;
 }
 
-.notables {
-    padding-left: 1.2em;
+.hl-desc {
+    margin: 0.35rem 0 0;
+    color: var(--text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
 }
 
-.notables li {
-    margin-bottom: 0.6rem;
+.achievement-entry {
+    margin-bottom: 1.5rem;
 }
 
-.notables li::marker,
 .bio ul.interests li::marker {
     color: var(--accent);
 }
@@ -481,12 +481,13 @@ footer p {
     flex-wrap: wrap;
     align-items: baseline;
     gap: 1rem;
-    font-size: 1.2rem;
-    line-height: 1;
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
 }
 
 .social-links a {
-    color: var(--text-muted);
+    color: var(--link-color);
 }
 
 .social-links a:hover {
@@ -532,7 +533,7 @@ footer p {
     }
 
     .site-title {
-        font-size: 1.125rem;
+        font-size: 0.9375rem;
     }
 
     .site-nav {
@@ -559,6 +560,15 @@ footer p {
         width: 45%;
         max-width: 180px;
         margin: 0 0 1.5rem;
+    }
+
+    .bio {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-greeting {
+        order: -1;
     }
 }
 
