@@ -91,7 +91,7 @@ layout: default
     <h2 class="section-title">achievements and competitions</h2>
     <div class="achievement-entry">
         <div class="hl-top">
-            <h3 class="hl-title">HackSpain 2026</h3>
+            <h3 class="hl-title">HackSpain 2026 <span class="forthcoming">(blog to come)</span></h3>
             <span class="hl-meta">Winner · HappyRobot track</span>
         </div>
         <p class="hl-desc">Won the HappyRobot track at the first edition of HackSpain.</p>

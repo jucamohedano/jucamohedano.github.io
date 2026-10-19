@@ -28,7 +28,7 @@ The result that mattered to the department wasn't a metric on a leaderboard: val
 
 A workflow nobody can find isn't automation, it's a script. COVAP runs a self-hosted [OpenWebUI](https://github.com/open-webui/open-webui) instance as its internal AI platform, so I wrote two filters for it:
 
-- an **integration filter** that lets users launch the budget workflow directly from the chat interface, connecting the project to the tool people already had open;
+- an **integration filter** that lets users launch the budget workflow directly from the chat interface, connecting the project to the tool people already had open.
 - a **context-engineering filter** that improves query handling by dynamically injecting relevant context or running a more advanced retrieval step.
 
 Building these meant reading a large unfamiliar codebase without much documentation and tracing its execution flow until I understood where a custom integration could hook in cleanly. That turned out to be as much of the work as the AI parts.

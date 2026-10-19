@@ -32,7 +32,7 @@ Log parsing turns out to be a small field with a dozen genuinely different ideas
 - **Fixed-depth tree** (Drain): stream logs through a shallow parse tree with a cache. Fast, online, boringly reliable.
 - **Streaming with longest-common-subsequence** (Spell): compare each new line against known templates by LCS.
 - **Iterative partitioning** (IPLoM): split logs by length, then token position, then bijection.
-- **n-gram dictionaries** (Logram): count token n-grams; anything frequent is template.
+- **n-gram dictionaries** (Logram): count token n-grams and treat frequent patterns as templates.
 - **Evolutionary search** (MoLFI): frame parsing as multi-objective optimisation and search with a genetic algorithm.
 - **Clustering** (LogSig, LogMine, SHISO): group similar lines, then abstract each cluster.
 - **Heuristics** (AEL), and a **bidirectional parallel tree** (Brain) built around the longest common patterns.
@@ -67,8 +67,8 @@ With logs turned into structured templates, the features you feed a detector are
 
 The existing benchmark supported five detectors. I extended it to **49**, the full family of [PyOD](https://github.com/yzhao062/pyod) algorithms that inherit from its base detector, spanning classical methods (Isolation Forest, LOF, One-Class SVM, HBOS), deep models (autoencoders, DeepSVDD), ensembles, and GAN-based detectors. Making that many algorithms comparable meant more harness than model:
 
-- **per-algorithm memory tracking**, because a detector that needs 30 GB is a non-starter no matter its AUC;
-- **dimensionality reduction** (MCA for the categorical features, then UMAP) to actually *see* the structure and the outliers rather than trusting a score blindly;
+- **per-algorithm memory tracking**, because a detector that needs 30 GB is a non-starter no matter its AUC.
+- **dimensionality reduction** (MCA for the categorical features, then UMAP) to actually *see* the structure and the outliers rather than trusting a score blindly.
 - **YAML-driven configuration and comparative ranking**, so adding an algorithm was a config entry, not a code change.
 
 ## What I Took Away

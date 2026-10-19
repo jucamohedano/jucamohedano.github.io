@@ -42,7 +42,7 @@ Chasing accuracy on a target that was never well-defined suddenly looked like th
 The framework runs on **OVEN** (Hu et al., ICCV 2023), an open-domain recognition benchmark whose entities are grounded in Wikidata, so every answer can be placed on a real taxonomy rather than compared as a string.
 
 ![The OVEN task: an image and a question map to a Wikidata entity, which sits on a subclass chain from specific entity up to root](/assets/images/thesis_oven_task.png)
-*OVEN maps each image to a Wikipedia/Wikidata entity, which gives every target a subclass chain. A parent label always exists, so the gap between the generic and the specific answer can be measured. Figure from my defence presentation; benchmark by Hu et al. (2023).*
+*OVEN maps each image to a Wikipedia/Wikidata entity, which gives every target a subclass chain. A parent label always exists, so the gap between the generic and the specific answer can be measured. Figure from my defence presentation. Benchmark by Hu et al. (2023).*
 
 That taxonomy is what makes the measurement possible. For each image the framework draws **256 stochastic samples**, checks each with a second language model acting as judge, and maps predictions onto the Wikidata subclass chain so near-misses earn partial credit instead of being discarded.
 
