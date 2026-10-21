@@ -31,7 +31,7 @@
 % A section heading, aligned with the content column.
 \newcommand{\cvsection}[1]{%
   \needspace{4\baselineskip}%
-  \vspace{2.5mm}%
+  \vspace{2mm}%
   \hspace*{\dimexpr\datecol+\gapcol\relax}{\LARGE #1}\par
   \vspace{1.4mm}}
 
@@ -41,7 +41,7 @@
   \begin{minipage}[t]{\datecol}\raggedleft\strut #1\end{minipage}%
   \hspace{\gapcol}%
   \begin{minipage}[t]{\bodycol}\raggedright\strut #2\end{minipage}\par
-  \vspace{1.1mm}}
+  \vspace{0.85mm}}
 
 % Content with no label in the left column.
 \newcommand{\cvline}[1]{\cventry{}{#1}}
@@ -93,8 +93,6 @@
     \item Compared GPT-2 expert neurons against fMRI recordings from nine subjects
           using representational similarity analysis; expert neurons align with brain
           activity better than the dense embeddings containing them (mean \textit{d} = 0.63).
-    \item Improved cache-based Test-Time Adaptation with a waiting-list strategy that
-          revisits uncertain samples, targeting non-i.i.d.\ streams.
   \end{itemize}}
 
 \cventry{2019 -- 2022}{%
@@ -136,11 +134,14 @@
 
 % ── skills ────────────────────────────────────────────────────────────────
 \cvsection{Skills}
-\cventry{Coding}{Python [PyTorch, Transformers, vLLM], SLURM}
+\cventry{Coding}{Python [PyTorch, Transformers, TRL, vLLM], SLURM}
 \cventry{Languages}{Spanish, English}
 
 % ── competitions & awards ─────────────────────────────────────────────────
 \cvsection{Competitions \& Awards}
+\cventry{2026}{\textbf{HackSpain}, \role{Winner of the HappyRobot track} at its first edition.}
+\cventry{RLM post-training}{\textbf{CloudRift compute grant} for RLM post-training.}
+\cventry{MSc thesis}{\textbf{EuroHPC cluster compute grant} for my master's thesis.}
 \cventry{2024}{\textbf{NASA International Space Apps}, \role{honorable mention};
                \textbf{Hub Innovazione Trentino Challenge};
                \textbf{AI Scholarship}, COVAP}
