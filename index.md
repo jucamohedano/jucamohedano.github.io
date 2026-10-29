@@ -17,7 +17,7 @@ layout: default
     </ul>
     <p>
         At the moment I am working on a side project,
-        <a href="https://github.com/jucamohedano/rlm/tree/feat/kernel-rlm-cuda">post-training a model to learn the RLM environment to generate CUDA kernels</a>.
+        <a href="https://github.com/jucamohedano/kernel-rlm">post-training a model to learn the RLM environment to generate CUDA kernels</a>, supported by a CloudRift compute grant.
     </p>
     <p>
         I would be very happy to discuss any of these topics if you are
