@@ -17,7 +17,7 @@ layout: default
     </ul>
     <p>
         At the moment I am working on a side project,
-        <a href="https://github.com/jucamohedano/rlm/tree/feat/kernel-rlm-cuda">post-training a model to learn the RLM environment to generate CUDA kernels</a>.
+        <a href="https://github.com/jucamohedano/kernel-rlm">post-training a model to learn the RLM environment to generate CUDA kernels</a>, supported by a CloudRift compute grant.
     </p>
     <p>
         I would be very happy to discuss any of these topics if you are
@@ -97,8 +97,8 @@ layout: default
         <p class="hl-desc">Won the HappyRobot track at the first edition of HackSpain.</p>
     </div>
     <div class="achievement-entry">
-        <h3 class="hl-title"><a href="https://eps.leeds.ac.uk/computing-undergraduate/news/article/5647/party-time-lasr-team-wins-gold-in-robocup-home-education-challenge">RoboCup</a> and SciRoc</h3>
-        <p class="hl-desc">I co-led the university robotics team with <a href="https://www.linkedin.com/in/jared-w-swift/">Jared</a> and competed in both challenges.</p>
+        <h3 class="hl-title"><a href="https://eps.leeds.ac.uk/computing-undergraduate/news/article/5647/party-time-lasr-team-wins-gold-in-robocup-home-education-challenge">RoboCup</a>, SciRoc and <a href="https://www.linkedin.com/company/fruitpunchai/">FruitPunch AI</a></h3>
+        <p class="hl-desc">I co-led the university robotics team with <a href="https://www.linkedin.com/in/jared-w-swift/">Jared</a> and competed in both challenges. I also took part in FruitPunch AI.</p>
     </div>
     <!-- Temporarily hidden: I also took part in the NASA International Space Apps Challenge. -->
 </section>
